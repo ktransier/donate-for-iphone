@@ -51,17 +51,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="RyJ-BQ-b7n">
                         <nil key="title"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OG5-xi-rSp">
-                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Donate">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="donateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TOF-w3-stV"/>
-                            </connections>
-                        </button>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="6cz-Is-a2l" id="FD0-uS-4kz"/>
+                        <segue destination="0bf-ne-6dx" kind="show" identifier="showOrgDetail" id="d1a-nb-RIv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -84,6 +78,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GYs-G6-Mtb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="609" y="408"/>
+        </scene>
+        <!--Org Detail View Controller-->
+        <scene sceneID="pI2-HE-AzU">
+            <objects>
+                <viewController id="0bf-ne-6dx" customClass="OrgDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HTX-xQ-m1U"/>
+                        <viewControllerLayoutGuide type="bottom" id="whT-GJ-XqY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T06-Tm-fDs">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Org Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qC-We-GmB">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="133" width="79" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Org Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCj-PF-Aan">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="176" width="121" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="7qC-We-GmB"/>
+                                <exclude reference="OCj-PF-Aan"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="7qC-We-GmB"/>
+                                <include reference="OCj-PF-Aan"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="orgNameLabel" destination="7qC-We-GmB" id="bV9-vO-Ld3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VLa-H9-VJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2059.5" y="408"/>
         </scene>
     </scenes>
 </document>

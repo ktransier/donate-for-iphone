@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E71938571A116017006E1910 /* OrgDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E71938561A116017006E1910 /* OrgDetailViewController.m */; };
 		E78274781A1068C7002BDF58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E78274771A1068C7002BDF58 /* main.m */; };
 		E782747B1A1068C7002BDF58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E782747A1A1068C7002BDF58 /* AppDelegate.m */; };
 		E782747E1A1068C7002BDF58 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E782747D1A1068C7002BDF58 /* ViewController.m */; };
@@ -31,6 +32,8 @@
 		289D9F602F80E5E06FA60D21 /* libPods-StripeTestObjC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StripeTestObjC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		815853D6BC5DA31FA15AF11F /* Pods-StripeTestObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StripeTestObjC.release.xcconfig"; path = "Pods/Target Support Files/Pods-StripeTestObjC/Pods-StripeTestObjC.release.xcconfig"; sourceTree = "<group>"; };
 		9A6FE553E43E6A4A4202FDB1 /* Pods-StripeTestObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StripeTestObjC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StripeTestObjC/Pods-StripeTestObjC.debug.xcconfig"; sourceTree = "<group>"; };
+		E71938551A116016006E1910 /* OrgDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrgDetailViewController.h; sourceTree = "<group>"; };
+		E71938561A116017006E1910 /* OrgDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrgDetailViewController.m; sourceTree = "<group>"; };
 		E78274721A1068C7002BDF58 /* StripeTestObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StripeTestObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78274761A1068C7002BDF58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E78274771A1068C7002BDF58 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -102,6 +105,8 @@
 				E782747A1A1068C7002BDF58 /* AppDelegate.m */,
 				E782747C1A1068C7002BDF58 /* ViewController.h */,
 				E782747D1A1068C7002BDF58 /* ViewController.m */,
+				E71938551A116016006E1910 /* OrgDetailViewController.h */,
+				E71938561A116017006E1910 /* OrgDetailViewController.m */,
 				E782747F1A1068C7002BDF58 /* Main.storyboard */,
 				E78274821A1068C7002BDF58 /* Images.xcassets */,
 				E78274841A1068C7002BDF58 /* LaunchScreen.xib */,
@@ -288,6 +293,7 @@
 			files = (
 				E782747E1A1068C7002BDF58 /* ViewController.m in Sources */,
 				E782747B1A1068C7002BDF58 /* AppDelegate.m in Sources */,
+				E71938571A116017006E1910 /* OrgDetailViewController.m in Sources */,
 				E78274781A1068C7002BDF58 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
