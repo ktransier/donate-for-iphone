@@ -13,22 +13,18 @@
 @interface OrgDetailViewController () <PKPaymentAuthorizationViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *orgNameLabel;
+@property (weak, nonatomic) IBOutlet UITextField *donationAmount;
 
 @end
 
 @implementation OrgDetailViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    self.orgNameLabel.text = self.orgName;
-    
+- (IBAction)donateButton:(id)sender {
+    [self.donationAmount resignFirstResponder];
     PKPaymentRequest *request = [Stripe
                                  paymentRequestWithMerchantIdentifier:@"merchant.fm.kenneth.donate"];
     // Configure your request here.
     NSString *label = self.orgName;
-    NSDecimalNumber *amount = [NSDecimalNumber decimalNumberWithString:@"25.00"];
+    NSDecimalNumber *amount = [NSDecimalNumber decimalNumberWithString:self.donationAmount.text];
     request.paymentSummaryItems = @[[PKPaymentSummaryItem summaryItemWithLabel:label amount:amount]];
     
     if ([Stripe canSubmitPaymentRequest:request]) {
@@ -40,6 +36,22 @@
     } else {
         // Show the user your own credit card form (see options 2 or 3)
     }
+
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch * touch = [touches anyObject];
+    if(touch.phase == UITouchPhaseBegan) {
+        [self.donationAmount resignFirstResponder];
+    }
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    self.orgNameLabel.text = self.orgName;
+    
 }
 
 - (void)paymentAuthorizationViewController:(PKPaymentAuthorizationViewController *)controller
