@@ -18,20 +18,39 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+NSArray *orgs;
+NSString *selectedOrg;
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [orgs count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *simpleTableIdentifier = @"SimpleTableCell";
     
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
     
+    cell.textLabel.text = [orgs objectAtIndex:indexPath.row];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
+    selectedOrg = cell.textLabel.text;
     
     PKPaymentRequest *request = [Stripe
                                  paymentRequestWithMerchantIdentifier:@"merchant.fm.kenneth.donate"];
     // Configure your request here.
-    NSString *label = @"Premium Llama Food";
-    NSDecimalNumber *amount = [NSDecimalNumber decimalNumberWithString:@"29.15"];
+    NSString *label = selectedOrg;
+    NSDecimalNumber *amount = [NSDecimalNumber decimalNumberWithString:@"25.00"];
     request.paymentSummaryItems = @[[PKPaymentSummaryItem summaryItemWithLabel:label amount:amount]];
     
     if ([Stripe canSubmitPaymentRequest:request]) {
@@ -43,6 +62,17 @@
     } else {
         // Show the user your own credit card form (see options 2 or 3)
     }
+    
+}
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    orgs = [NSArray arrayWithObjects:@"Humans Right Watch", @"Doctors Without Borders", @"Girls Who Code", nil];
+
+}
+- (IBAction)donateButton:(id)sender {
 }
 
 
@@ -91,10 +121,10 @@
 - (void)createBackendChargeWithToken:(STPToken *)token
                           completion:(void (^)(PKPaymentAuthorizationStatus))completion {
     
-    NSURL *url = [NSURL URLWithString:@"https://example.com/token"];
+    NSURL *url = [NSURL URLWithString:@"http://donate-rails.herokuapp.com/donations/token"];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     request.HTTPMethod = @"POST";
-    NSString *body     = [NSString stringWithFormat:@"stripeToken=%@", token.tokenId];
+    NSString *body     = [NSString stringWithFormat:@"stripeToken=%@&selectedOrg=%@", token.tokenId, selectedOrg];
     request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];
     
     [NSURLConnection sendAsynchronousRequest:request
