@@ -14,6 +14,7 @@
 		E78274831A1068C7002BDF58 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E78274821A1068C7002BDF58 /* Images.xcassets */; };
 		E78274861A1068C7002BDF58 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78274841A1068C7002BDF58 /* LaunchScreen.xib */; };
 		E78274921A1068C7002BDF58 /* StripeTestObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E78274911A1068C7002BDF58 /* StripeTestObjCTests.m */; };
+		EE8ADE3413A2472873D8D048 /* libPods-StripeTestObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 289D9F602F80E5E06FA60D21 /* libPods-StripeTestObjC.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		289D9F602F80E5E06FA60D21 /* libPods-StripeTestObjC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StripeTestObjC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		815853D6BC5DA31FA15AF11F /* Pods-StripeTestObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StripeTestObjC.release.xcconfig"; path = "Pods/Target Support Files/Pods-StripeTestObjC/Pods-StripeTestObjC.release.xcconfig"; sourceTree = "<group>"; };
+		9A6FE553E43E6A4A4202FDB1 /* Pods-StripeTestObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StripeTestObjC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StripeTestObjC/Pods-StripeTestObjC.debug.xcconfig"; sourceTree = "<group>"; };
 		E78274721A1068C7002BDF58 /* StripeTestObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StripeTestObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78274761A1068C7002BDF58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E78274771A1068C7002BDF58 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +44,7 @@
 		E782748B1A1068C7002BDF58 /* StripeTestObjCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StripeTestObjCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78274901A1068C7002BDF58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E78274911A1068C7002BDF58 /* StripeTestObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StripeTestObjCTests.m; sourceTree = "<group>"; };
+		E782749B1A106965002BDF58 /* StripeTestObjC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = StripeTestObjC.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE8ADE3413A2472873D8D048 /* libPods-StripeTestObjC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +66,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90DCB9A814B448270E01B3D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				289D9F602F80E5E06FA60D21 /* libPods-StripeTestObjC.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E78274691A1068C7002BDF58 = {
 			isa = PBXGroup;
 			children = (
 				E78274741A1068C7002BDF58 /* StripeTestObjC */,
 				E782748E1A1068C7002BDF58 /* StripeTestObjCTests */,
 				E78274731A1068C7002BDF58 /* Products */,
+				FBC89DD70E1AC6EA4A3EDBD6 /* Pods */,
+				90DCB9A814B448270E01B3D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +97,7 @@
 		E78274741A1068C7002BDF58 /* StripeTestObjC */ = {
 			isa = PBXGroup;
 			children = (
+				E782749B1A106965002BDF58 /* StripeTestObjC.entitlements */,
 				E78274791A1068C7002BDF58 /* AppDelegate.h */,
 				E782747A1A1068C7002BDF58 /* AppDelegate.m */,
 				E782747C1A1068C7002BDF58 /* ViewController.h */,
@@ -119,6 +136,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FBC89DD70E1AC6EA4A3EDBD6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A6FE553E43E6A4A4202FDB1 /* Pods-StripeTestObjC.debug.xcconfig */,
+				815853D6BC5DA31FA15AF11F /* Pods-StripeTestObjC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +152,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E78274951A1068C7002BDF58 /* Build configuration list for PBXNativeTarget "StripeTestObjC" */;
 			buildPhases = (
+				9709DED2E87074DA86414CB6 /* Check Pods Manifest.lock */,
 				E782746E1A1068C7002BDF58 /* Sources */,
 				E782746F1A1068C7002BDF58 /* Frameworks */,
 				E78274701A1068C7002BDF58 /* Resources */,
+				9729F2BA1226EC9C0DCB9180 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,6 +196,12 @@
 				TargetAttributes = {
 					E78274711A1068C7002BDF58 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = EC6P266APU;
+						SystemCapabilities = {
+							com.apple.OMC = {
+								enabled = 1;
+							};
+						};
 					};
 					E782748A1A1068C7002BDF58 = {
 						CreatedOnToolsVersion = 6.1;
@@ -213,6 +247,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9709DED2E87074DA86414CB6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9729F2BA1226EC9C0DCB9180 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StripeTestObjC/Pods-StripeTestObjC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E782746E1A1068C7002BDF58 /* Sources */ = {
@@ -343,21 +410,41 @@
 		};
 		E78274961A1068C7002BDF58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A6FE553E43E6A4A4202FDB1 /* Pods-StripeTestObjC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = StripeTestObjC/StripeTestObjC.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					STRIPE_ENABLE_APPLEPAY,
+					"COCOAPODS=1",
+				);
 				INFOPLIST_FILE = StripeTestObjC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		E78274971A1068C7002BDF58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 815853D6BC5DA31FA15AF11F /* Pods-StripeTestObjC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = StripeTestObjC/StripeTestObjC.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					STRIPE_ENABLE_APPLEPAY,
+				);
 				INFOPLIST_FILE = StripeTestObjC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -414,6 +501,7 @@
 				E78274971A1068C7002BDF58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E78274981A1068C7002BDF58 /* Build configuration list for PBXNativeTarget "StripeTestObjCTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +510,7 @@
 				E782749A1A1068C7002BDF58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
