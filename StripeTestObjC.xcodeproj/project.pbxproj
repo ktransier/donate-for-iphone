@@ -15,6 +15,7 @@
 		E78274831A1068C7002BDF58 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E78274821A1068C7002BDF58 /* Images.xcassets */; };
 		E78274861A1068C7002BDF58 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78274841A1068C7002BDF58 /* LaunchScreen.xib */; };
 		E78274921A1068C7002BDF58 /* StripeTestObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E78274911A1068C7002BDF58 /* StripeTestObjCTests.m */; };
+		E7DB66451A118E9A00EBF97F /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E7DB66441A118E9A00EBF97F /* app-icon.png */; };
 		EE8ADE3413A2472873D8D048 /* libPods-StripeTestObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 289D9F602F80E5E06FA60D21 /* libPods-StripeTestObjC.a */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		E78274901A1068C7002BDF58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E78274911A1068C7002BDF58 /* StripeTestObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StripeTestObjCTests.m; sourceTree = "<group>"; };
 		E782749B1A106965002BDF58 /* StripeTestObjC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = StripeTestObjC.entitlements; sourceTree = "<group>"; };
+		E7DB66441A118E9A00EBF97F /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app-icon.png"; path = "design/app-icon.png"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 		E78274751A1068C7002BDF58 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E7DB66441A118E9A00EBF97F /* app-icon.png */,
 				E78274761A1068C7002BDF58 /* Info.plist */,
 				E78274771A1068C7002BDF58 /* main.m */,
 			);
@@ -240,6 +243,7 @@
 			files = (
 				E78274811A1068C7002BDF58 /* Main.storyboard in Resources */,
 				E78274861A1068C7002BDF58 /* LaunchScreen.xib in Resources */,
+				E7DB66451A118E9A00EBF97F /* app-icon.png in Resources */,
 				E78274831A1068C7002BDF58 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
