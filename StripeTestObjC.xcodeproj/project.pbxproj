@@ -16,6 +16,12 @@
 		E78274861A1068C7002BDF58 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78274841A1068C7002BDF58 /* LaunchScreen.xib */; };
 		E78274921A1068C7002BDF58 /* StripeTestObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E78274911A1068C7002BDF58 /* StripeTestObjCTests.m */; };
 		E7DB66451A118E9A00EBF97F /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E7DB66441A118E9A00EBF97F /* app-icon.png */; };
+		E7DB66481A11937400EBF97F /* OrgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DB66471A11937400EBF97F /* OrgCell.m */; };
+		E7DB664B1A11B51000EBF97F /* ushahidi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7DB664A1A11B51000EBF97F /* ushahidi.jpg */; };
+		E7DB664D1A11B51A00EBF97F /* hrw.png in Resources */ = {isa = PBXBuildFile; fileRef = E7DB664C1A11B51A00EBF97F /* hrw.png */; };
+		E7DB664F1A11B53B00EBF97F /* chairtywater.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7DB664E1A11B53B00EBF97F /* chairtywater.jpg */; };
+		E7DB66511A11B54B00EBF97F /* msf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7DB66501A11B54B00EBF97F /* msf.jpg */; };
+		E7DB66531A11B57000EBF97F /* girlswhocode.png in Resources */ = {isa = PBXBuildFile; fileRef = E7DB66521A11B57000EBF97F /* girlswhocode.png */; };
 		EE8ADE3413A2472873D8D048 /* libPods-StripeTestObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 289D9F602F80E5E06FA60D21 /* libPods-StripeTestObjC.a */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +56,13 @@
 		E78274911A1068C7002BDF58 /* StripeTestObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StripeTestObjCTests.m; sourceTree = "<group>"; };
 		E782749B1A106965002BDF58 /* StripeTestObjC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = StripeTestObjC.entitlements; sourceTree = "<group>"; };
 		E7DB66441A118E9A00EBF97F /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app-icon.png"; path = "design/app-icon.png"; sourceTree = SOURCE_ROOT; };
+		E7DB66461A11937400EBF97F /* OrgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrgCell.h; sourceTree = "<group>"; };
+		E7DB66471A11937400EBF97F /* OrgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrgCell.m; sourceTree = "<group>"; };
+		E7DB664A1A11B51000EBF97F /* ushahidi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ushahidi.jpg; sourceTree = "<group>"; };
+		E7DB664C1A11B51A00EBF97F /* hrw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hrw.png; sourceTree = "<group>"; };
+		E7DB664E1A11B53B00EBF97F /* chairtywater.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chairtywater.jpg; sourceTree = "<group>"; };
+		E7DB66501A11B54B00EBF97F /* msf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = msf.jpg; sourceTree = "<group>"; };
+		E7DB66521A11B57000EBF97F /* girlswhocode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girlswhocode.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +123,8 @@
 				E71938551A116016006E1910 /* OrgDetailViewController.h */,
 				E71938561A116017006E1910 /* OrgDetailViewController.m */,
 				E782747F1A1068C7002BDF58 /* Main.storyboard */,
+				E7DB66461A11937400EBF97F /* OrgCell.h */,
+				E7DB66471A11937400EBF97F /* OrgCell.m */,
 				E78274821A1068C7002BDF58 /* Images.xcassets */,
 				E78274841A1068C7002BDF58 /* LaunchScreen.xib */,
 				E78274751A1068C7002BDF58 /* Supporting Files */,
@@ -120,6 +135,7 @@
 		E78274751A1068C7002BDF58 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E7DB66491A11B4DB00EBF97F /* Organizations */,
 				E7DB66441A118E9A00EBF97F /* app-icon.png */,
 				E78274761A1068C7002BDF58 /* Info.plist */,
 				E78274771A1068C7002BDF58 /* main.m */,
@@ -142,6 +158,18 @@
 				E78274901A1068C7002BDF58 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E7DB66491A11B4DB00EBF97F /* Organizations */ = {
+			isa = PBXGroup;
+			children = (
+				E7DB66521A11B57000EBF97F /* girlswhocode.png */,
+				E7DB66501A11B54B00EBF97F /* msf.jpg */,
+				E7DB664E1A11B53B00EBF97F /* chairtywater.jpg */,
+				E7DB664C1A11B51A00EBF97F /* hrw.png */,
+				E7DB664A1A11B51000EBF97F /* ushahidi.jpg */,
+			);
+			name = Organizations;
 			sourceTree = "<group>";
 		};
 		FBC89DD70E1AC6EA4A3EDBD6 /* Pods */ = {
@@ -241,9 +269,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7DB66531A11B57000EBF97F /* girlswhocode.png in Resources */,
 				E78274811A1068C7002BDF58 /* Main.storyboard in Resources */,
 				E78274861A1068C7002BDF58 /* LaunchScreen.xib in Resources */,
 				E7DB66451A118E9A00EBF97F /* app-icon.png in Resources */,
+				E7DB664F1A11B53B00EBF97F /* chairtywater.jpg in Resources */,
+				E7DB66511A11B54B00EBF97F /* msf.jpg in Resources */,
+				E7DB664D1A11B51A00EBF97F /* hrw.png in Resources */,
+				E7DB664B1A11B51000EBF97F /* ushahidi.jpg in Resources */,
 				E78274831A1068C7002BDF58 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E782747E1A1068C7002BDF58 /* ViewController.m in Sources */,
+				E7DB66481A11937400EBF97F /* OrgCell.m in Sources */,
 				E782747B1A1068C7002BDF58 /* AppDelegate.m in Sources */,
 				E71938571A116017006E1910 /* OrgDetailViewController.m in Sources */,
 				E78274781A1068C7002BDF58 /* main.m in Sources */,

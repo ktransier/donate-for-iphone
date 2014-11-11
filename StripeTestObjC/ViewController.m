@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "OrgDetailViewController.h"
+#import "OrgCell.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -23,6 +24,7 @@ NSString *selectedOrg;
 - (void)viewDidLoad {
     [super viewDidLoad];
     orgs = [NSArray arrayWithObjects:@"Humans Right Watch", @"Doctors Without Borders", @"Girls Who Code", nil];
+    self.navigationItem.title = @"Non-Profits";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,13 +40,24 @@ NSString *selectedOrg;
 // Load each cell of table view
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *simpleTableIdentifier = @"SimpleTableCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-    }
+    
+  //  static NSString *simpleTableIdentifier = @"SimpleTableCell";
+    
+  //  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+  //  if (cell == nil) {
+   //     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+   // }
+    
+  //  cell.textLabel.text = [orgs objectAtIndex:indexPath.row];
+    
+    
+    
+    static NSString *orgCellIdentifier = @"orgCell";
+    
+    OrgCell *cell = [tableView dequeueReusableCellWithIdentifier:orgCellIdentifier];
     
     cell.textLabel.text = [orgs objectAtIndex:indexPath.row];
     return cell;
@@ -56,15 +69,12 @@ NSString *selectedOrg;
         OrgDetailViewController* detailVC = segue.destinationViewController;
         NSIndexPath* indexPath = [self.tableView indexPathForSelectedRow];
         NSString* orgName = orgs[indexPath.row];
-        NSLog(orgName);
         detailVC.orgName = orgName;
     }
 }
 
 // Send to detail view controller when tableview cell tapped
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
     [self performSegueWithIdentifier:@"showOrgDetail" sender:self];
     
