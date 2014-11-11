@@ -10,4 +10,7 @@
 
 @interface OrgCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *orgNameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *image;
+
 @end

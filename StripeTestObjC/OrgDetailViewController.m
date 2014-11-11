@@ -14,16 +14,33 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *orgNameLabel;
 @property (weak, nonatomic) IBOutlet UITextField *donationAmount;
+@property (weak, nonatomic) IBOutlet UIImageView *orgImage;
+@property (weak, nonatomic) IBOutlet UILabel *orgContentLabel;
 
 @end
 
 @implementation OrgDetailViewController
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    self.orgNameLabel.text = self.org.name;
+    self.orgImage.image = self.org.image;
+    self.orgContentLabel.text = self.org.content;
+    self.orgImage.layer.cornerRadius = 100.0;
+    self.orgImage.clipsToBounds = true;
+}
+
+
+
 - (IBAction)donateButton:(id)sender {
     [self.donationAmount resignFirstResponder];
     PKPaymentRequest *request = [Stripe
                                  paymentRequestWithMerchantIdentifier:@"merchant.fm.kenneth.donate"];
     // Configure your request here.
-    NSString *label = self.orgName;
+    NSString *label = self.org.name;
     NSDecimalNumber *amount = [NSDecimalNumber decimalNumberWithString:self.donationAmount.text];
     request.paymentSummaryItems = @[[PKPaymentSummaryItem summaryItemWithLabel:label amount:amount]];
     
@@ -44,14 +61,6 @@
     if(touch.phase == UITouchPhaseBegan) {
         [self.donationAmount resignFirstResponder];
     }
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    self.orgNameLabel.text = self.orgName;
-    
 }
 
 - (void)paymentAuthorizationViewController:(PKPaymentAuthorizationViewController *)controller
@@ -98,7 +107,7 @@
     NSURL *url = [NSURL URLWithString:@"http://donate-rails.herokuapp.com/donations/token"];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     request.HTTPMethod = @"POST";
-    NSString *body     = [NSString stringWithFormat:@"stripeToken=%@&selectedOrg=%@", token.tokenId, self.orgName];
+    NSString *body     = [NSString stringWithFormat:@"stripeToken=%@&selectedOrg=%@", token.tokenId, self.org.name];
     request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];
     
     [NSURLConnection sendAsynchronousRequest:request
