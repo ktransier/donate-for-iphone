@@ -26,9 +26,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.orgNameLabel.text = self.org.name;
-    self.orgImage.image = self.org.image;
-    self.orgContentLabel.text = self.org.content;
+    self.orgNameLabel.text = self.org[@"name"];
+    NSString* fullImageUrl = @"http://donate-rails.herokuapp.com/org-images/";
+    
+    NSString* imageURL = self.org[@"image_url"];
+    fullImageUrl = [fullImageUrl stringByAppendingString:imageURL];
+    self.orgImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:fullImageUrl]]];
     self.orgImage.layer.cornerRadius = 100.0;
     self.orgImage.clipsToBounds = true;
 }
@@ -40,7 +43,7 @@
     PKPaymentRequest *request = [Stripe
                                  paymentRequestWithMerchantIdentifier:@"merchant.fm.kenneth.donate"];
     // Configure your request here.
-    NSString *label = self.org.name;
+    NSString *label = self.org[@"name"];
     NSDecimalNumber *amount = [NSDecimalNumber decimalNumberWithString:self.donationAmount.text];
     request.paymentSummaryItems = @[[PKPaymentSummaryItem summaryItemWithLabel:label amount:amount]];
     
@@ -107,7 +110,7 @@
     NSURL *url = [NSURL URLWithString:@"http://donate-rails.herokuapp.com/donations/token"];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     request.HTTPMethod = @"POST";
-    NSString *body     = [NSString stringWithFormat:@"stripeToken=%@&selectedOrg=%@", token.tokenId, self.org.name];
+    NSString *body     = [NSString stringWithFormat:@"stripeToken=%@&selectedOrg=%@", token.tokenId, self.org[@"name"]];
     request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];
     
     [NSURLConnection sendAsynchronousRequest:request
@@ -124,23 +127,9 @@
 }
 
 
-
-
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

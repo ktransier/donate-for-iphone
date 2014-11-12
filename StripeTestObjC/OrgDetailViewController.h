@@ -10,7 +10,5 @@
 #import "Organization.h"
 
 @interface OrgDetailViewController : UIViewController
-
-    @property(nonatomic, strong) Organization* org;
-
+    @property(nonatomic, strong) NSDictionary* org;
 @end

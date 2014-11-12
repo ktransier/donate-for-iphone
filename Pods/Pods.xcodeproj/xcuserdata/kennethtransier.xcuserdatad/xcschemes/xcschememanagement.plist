@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-StripeTestObjC-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-StripeTestObjC-Stripe.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>05D03D21B6E20328CA3620A0</key>
+		<key>1221787B4459EAF0463DD70B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FD2CB2EC22F4B0690E133E10</key>
+		<key>83ABD3AFFEB7F7FA791F1FD8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CF0E5D93BAE13F825E305C18</key>
 		<dict>
 			<key>primary</key>
 			<true/>

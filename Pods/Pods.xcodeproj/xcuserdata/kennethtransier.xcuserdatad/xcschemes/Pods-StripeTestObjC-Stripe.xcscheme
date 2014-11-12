@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "05D03D21B6E20328CA3620A0"
+               BlueprintIdentifier = "CF0E5D93BAE13F825E305C18"
                BuildableName = "libPods-StripeTestObjC-Stripe.a"
                BlueprintName = "Pods-StripeTestObjC-Stripe"
                ReferencedContainer = "container:Pods.xcodeproj">

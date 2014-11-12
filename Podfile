@@ -6,6 +6,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'StripeTestObjC' do
     pod 'Stripe'
     pod 'Stripe/ApplePay'
+    pod 'AFNetworking'
 end
 
 target 'StripeTestObjCTests' do

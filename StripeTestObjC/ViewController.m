@@ -10,119 +10,86 @@
 #import "OrgDetailViewController.h"
 #import "OrgCell.h"
 #import "Organization.h"
+#import "AFNetworking.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+    @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
 @implementation ViewController
 
-NSArray *orgs;
-NSString *selectedOrg;
+    NSString *selectedOrg;
+    NSArray *orgArray;
 
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    Organization* org1 = [[Organization alloc] init];
-    org1.name = @"Humans Right Watch";
-    org1.content = @"HRW provides timely information about human rights crises in 90+ countries.";
-    org1.image = [UIImage imageNamed:@"hrw.png"];
-    
-    Organization* org2 = [[Organization alloc] init];
-    org2.name = @"Malala Fund";
-    org2.content = @"Malala fund is focused on helping girls go to school and raise their voices for the right to education.";
-    org2.image = [UIImage imageNamed:@"malala.jpg"];
-    
-    Organization* org3 = [[Organization alloc] init];
-    org3.name = @"Wounded Warrior Project";
-    org3.content = @"Wounded Warrior Project is a military/veterans charity organization empowering injured veterans and their families.";
-    org3.image = [UIImage imageNamed:@"wwp.jpg"];
-    
-    Organization* org4 = [[Organization alloc] init];
-    org4.name = @"Girls Who Code";
-    org4.content = @"Closing the gender gap in the technology and engineering sectors";
-    org4.image = [UIImage imageNamed:@"girlswhocode.png"];
-
-    Organization* org5 = [[Organization alloc] init];
-    org5.name = @"Doctors Without Borders";
-    org5.content = @"Delivering emergency medical aid to people affected by conflict, epidemics, disasters or exclusion from health care";
-    org5.image = [UIImage imageNamed:@"msf.jpg"];
-    
-    Organization* org6 = [[Organization alloc] init];
-    org6.name = @"Ushahidi";
-    org6.content = @"Empowering people to make a serious impact with open source technologies, cross-sector partnerships, and ground-breaking ventures";
-    org6.image = [UIImage imageNamed:@"ushahidi.jpg"];
-    
-    Organization* org7 = [[Organization alloc] init];
-    org7.name = @"Charity: Water";
-    org7.content = @"Bringing clean, safe drinking water to people in developing countries";
-    org7.image = [UIImage imageNamed:@"charitywater.jpg"];
-    
-    Organization* org8 = [[Organization alloc] init];
-    org8.name = @"Make a Wish Foundation";
-    org8.content = @"Granting the wishes of children with life-threatening illnesses";
-    org8.image = [UIImage imageNamed:@"maw.jpg"];
-    
-    Organization* org9 = [[Organization alloc] init];
-    org9.name = @"Habitat For Humanity";
-    org9.content = @"Bringing people together to build homes, community, and hope";
-    org9.image = [UIImage imageNamed:@"habitat.jpg"];
-    
-    Organization* org10 = [[Organization alloc] init];
-    org10.name = @"American Red Cross";
-    org10.content = @"Disaster relief at home and abroad, CPR certification and first aid courses, blood donation, and emergency preparedness";
-    org10.image = [UIImage imageNamed:@"americanredcross.jpg"];
-
-    Organization* org11 = [[Organization alloc] init];
-    org11.name = @"Amnesty International";
-    org11.content = @"Conduct research and generate action to prevent and end grave abuses of human rights, and to demand justice for those whose rights have been violated";
-    org11.image = [UIImage imageNamed:@"amnesty.jpg"];
-
-    orgs = [NSArray arrayWithObjects:org1, org2, org3, org4, org5, org6, org7, org8, org9, org10, org11, nil];
-    self.navigationItem.title = @"Non-Profits";
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
-// Number of rows in table view
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return [orgs count];
-}
-
-// Load each cell of table view
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *orgCellIdentifier = @"orgCell";
-    OrgCell *cell = [tableView dequeueReusableCellWithIdentifier:orgCellIdentifier];
-    Organization* org = [orgs objectAtIndex:indexPath.row];
-    cell.orgNameLabel.text = org.name;
-    cell.image.image = org.image;
-    cell.image.layer.cornerRadius = 30.0;
-    cell.image.clipsToBounds = true;
-    return cell;
-}
-
-// Pass cell details to org detail view controller
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqual:@"showOrgDetail"]) {
-        OrgDetailViewController* detailVC = segue.destinationViewController;
-        NSIndexPath* indexPath = [self.tableView indexPathForSelectedRow];
-        Organization* org = orgs[indexPath.row];
-        detailVC.org = org;
+    - (void)viewDidLoad {
+        [super viewDidLoad];
+        self.navigationItem.title = @"Non-Profits";
+        [self.navigationController.navigationBar
+         setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+        [self makeOrganizationsRequest];
     }
-}
 
-// Send to detail view controller when tableview cell tapped
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    [self performSegueWithIdentifier:@"showOrgDetail" sender:self];
-    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
+    -(void)awakeFromNib {
+        [super awakeFromNib];
+        [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+        [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.22 green:0.259 blue:0.318 alpha:1]];
+    }
+
+    - (void)didReceiveMemoryWarning {
+        [super didReceiveMemoryWarning];
+    }
+
+    // Number of rows in table view
+    - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+    {
+        return [orgArray count];
+    }
+
+    -(void)makeOrganizationsRequest
+    {
+        NSURL *url = [NSURL URLWithString:@"http://donate-rails.herokuapp.com/organizations.json"];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        //AFNetworking asynchronous url request
+        AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+        operation.responseSerializer = [AFJSONResponseSerializer serializer];
+        [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+            orgArray = [responseObject objectForKey:@"organizations"];
+            [self.tableView reloadData];
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"Request Failed: %@, %@", error, error.userInfo);
+        }];
+        [operation start];
+    }
 
 
+    // Load each cell of table view
+    - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+    {
+        static NSString *orgCellIdentifier = @"orgCell";
+        OrgCell *cell = [tableView dequeueReusableCellWithIdentifier:orgCellIdentifier];
+        NSDictionary* org = [orgArray objectAtIndex:indexPath.row];
+        cell.orgNameLabel.text = org[@"name"];
+        NSString* fullImageUrl = @"http://donate-rails.herokuapp.com/org-images/";
+        NSString* imageURL = org[@"image_url"];
+        fullImageUrl = [fullImageUrl stringByAppendingString:imageURL];
+         cell.image.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:fullImageUrl]]];
+        cell.image.layer.cornerRadius = 30.0;
+        cell.image.clipsToBounds = true;
+        return cell;
+    }
+
+    // Pass cell details to org detail view controller
+    - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+        if ([segue.identifier isEqual:@"showOrgDetail"]) {
+            OrgDetailViewController* detailVC = segue.destinationViewController;
+            NSIndexPath* indexPath = [self.tableView indexPathForSelectedRow];
+            detailVC.org = orgArray[indexPath.row];
+        }
+    }
+
+    // Send to detail view controller when tableview cell tapped
+    - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+        [self performSegueWithIdentifier:@"showOrgDetail" sender:self];
+        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
 @end
