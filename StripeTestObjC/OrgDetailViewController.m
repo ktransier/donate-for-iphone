@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *donationAmount;
 @property (weak, nonatomic) IBOutlet UIImageView *orgImage;
 @property (weak, nonatomic) IBOutlet UILabel *orgContentLabel;
+@property (weak, nonatomic) IBOutlet UIButton *donateButton;
+@property CGPoint originalCenter;
 
 @end
 
@@ -27,6 +29,7 @@
     // Do any additional setup after loading the view.
     
     self.orgNameLabel.text = self.org[@"name"];
+    self.orgContentLabel.text = self.org[@"content"];
     NSString* fullImageUrl = @"http://donate-rails.herokuapp.com/org-images/";
     
     NSString* imageURL = self.org[@"image_url"];
@@ -34,7 +37,15 @@
     self.orgImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:fullImageUrl]]];
     self.orgImage.layer.cornerRadius = 100.0;
     self.orgImage.clipsToBounds = true;
+    
+    self.donateButton.backgroundColor = [UIColor colorWithRed:0.22 green:0.259 blue:0.318 alpha:1];
+    
+    self.originalCenter = self.view.center;
+
+    
 }
+
+
 
 
 
