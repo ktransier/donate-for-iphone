@@ -9,7 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-StripeTestObjC-SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-StripeTestObjC-Stripe.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-StripeTestObjC-TPKeyboardAvoiding.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1221787B4459EAF0463DD70B</key>
+		<key>1ED360B0DB343D506E27ACAA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>83ABD3AFFEB7F7FA791F1FD8</key>
+		<key>361B2C499F87108B3809CC90</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CF0E5D93BAE13F825E305C18</key>
+		<key>6E9504CE6514C94095546E66</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A33BADADC9BADA9D3E85D289</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C404E70CF706603F10040051</key>
 		<dict>
 			<key>primary</key>
 			<true/>

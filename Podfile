@@ -7,6 +7,8 @@ target 'StripeTestObjC' do
     pod 'Stripe'
     pod 'Stripe/ApplePay'
     pod 'AFNetworking'
+    pod 'SDWebImage'
+    pod 'TPKeyboardAvoiding'
 end
 
 target 'StripeTestObjCTests' do

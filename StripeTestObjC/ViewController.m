@@ -11,6 +11,7 @@
 #import "OrgCell.h"
 #import "Organization.h"
 #import "AFNetworking.h"
+#import "UIImageView+WebCache.h"
 
 @interface ViewController ()
     @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -69,10 +70,14 @@
         OrgCell *cell = [tableView dequeueReusableCellWithIdentifier:orgCellIdentifier];
         NSDictionary* org = [orgArray objectAtIndex:indexPath.row];
         cell.orgNameLabel.text = org[@"name"];
-        NSString* fullImageUrl = @"http://donate-rails.herokuapp.com/org-images/";
+        NSString* fullImageURL = @"http://donate-rails.herokuapp.com/org-images/";
         NSString* imageURL = org[@"image_url"];
-        fullImageUrl = [fullImageUrl stringByAppendingString:imageURL];
-         cell.image.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:fullImageUrl]]];
+        fullImageURL = [fullImageURL stringByAppendingString:imageURL];
+        
+        [cell.image sd_setImageWithURL:[NSURL URLWithString:fullImageURL]
+                       placeholderImage:[UIImage imageNamed:@"app-icon.png"]];
+        
+        
         cell.image.layer.cornerRadius = 30.0;
         cell.image.clipsToBounds = true;
         return cell;
