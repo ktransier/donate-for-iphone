@@ -23,7 +23,6 @@
 
 @implementation OrgDetailViewController
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -41,13 +40,8 @@
     self.donateButton.backgroundColor = [UIColor colorWithRed:0.22 green:0.259 blue:0.318 alpha:1];
     
     self.originalCenter = self.view.center;
-
     
 }
-
-
-
-
 
 - (IBAction)donateButton:(id)sender {
     [self.donationAmount resignFirstResponder];
@@ -118,10 +112,13 @@
 - (void)createBackendChargeWithToken:(STPToken *)token
                           completion:(void (^)(PKPaymentAuthorizationStatus))completion {
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString* email = [defaults objectForKey:@"email"];
+    
     NSURL *url = [NSURL URLWithString:@"http://donate-rails.herokuapp.com/donations/token"];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     request.HTTPMethod = @"POST";
-    NSString *body     = [NSString stringWithFormat:@"stripeToken=%@&selectedOrg=%@", token.tokenId, self.org[@"name"]];
+    NSString *body     = [NSString stringWithFormat:@"stripeToken=%@&selectedOrg=%@&email=%@", token.tokenId, self.org[@"name"], email];
     request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];
     
     [NSURLConnection sendAsynchronousRequest:request

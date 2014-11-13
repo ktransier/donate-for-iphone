@@ -1,0 +1,3 @@
+Network connection was lost error handling
+Static Tableview for settings
+SSL/Cloudflare

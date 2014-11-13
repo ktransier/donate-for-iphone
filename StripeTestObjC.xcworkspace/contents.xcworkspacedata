@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:todo.txt">
+   </FileRef>
+   <FileRef
       location = "group:StripeTestObjC.xcodeproj">
    </FileRef>
    <FileRef

@@ -87,6 +87,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="RyJ-BQ-b7n">
                         <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" image="settings-icon.png" id="nmh-Re-hBt">
+                            <connections>
+                                <segue destination="UBW-fY-p3C" kind="show" id="BU8-oB-QwH"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="6cz-Is-a2l" id="FD0-uS-4kz"/>
@@ -96,6 +101,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1368" y="407.25"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="y0m-cL-x0T">
+            <objects>
+                <viewController id="UBW-fY-p3C" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ptM-yt-3rv"/>
+                        <viewControllerLayoutGuide type="bottom" id="agj-AR-56n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FhB-gf-QBt">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gug-FV-KBW">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="70" width="368" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEj-88-8yd">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="41" width="42" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKg-Xx-XCq">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="165" y="127" width="34" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="saveSettings:" destination="UBW-fY-p3C" eventType="touchUpInside" id="afv-XY-yeR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Gug-FV-KBW"/>
+                                <exclude reference="lEj-88-8yd"/>
+                                <exclude reference="zKg-Xx-XCq"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Gug-FV-KBW"/>
+                                <include reference="lEj-88-8yd"/>
+                                <include reference="zKg-Xx-XCq"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="emailField" destination="Gug-FV-KBW" id="6bk-ES-VYx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JjR-S6-WJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2067" y="-171.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cOF-AC-10e">
@@ -154,6 +224,12 @@
                                             <rect key="frame" x="25" y="303" width="319" height="80"/>
                                         </variation>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rs6-JF-KeQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="87" y="42" width="200" height="200"/>
+                                        </variation>
+                                    </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="25" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8MM-tt-tvr">
                                         <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="34"/>
@@ -162,7 +238,7 @@
                                             <rect key="frame" x="161" y="231" width="52" height="30"/>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="166" y="406" width="109" height="61"/>
+                                            <rect key="frame" x="178" y="408" width="109" height="61"/>
                                         </variation>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPO-Q4-g14">
@@ -174,23 +250,17 @@
                                             <rect key="frame" x="143" y="235" width="10" height="21"/>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="140" y="422" width="18" height="29"/>
+                                            <rect key="frame" x="152" y="424" width="18" height="29"/>
                                         </variation>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rs6-JF-KeQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="87" y="42" width="200" height="200"/>
-                                        </variation>
-                                    </imageView>
                                 </subviews>
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="7qC-We-GmB"/>
                                         <exclude reference="OCj-PF-Aan"/>
+                                        <exclude reference="rs6-JF-KeQ"/>
                                         <exclude reference="8MM-tt-tvr"/>
                                         <exclude reference="QPO-Q4-g14"/>
-                                        <exclude reference="rs6-JF-KeQ"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
@@ -198,9 +268,9 @@
                                     <mask key="subviews">
                                         <include reference="7qC-We-GmB"/>
                                         <include reference="OCj-PF-Aan"/>
+                                        <include reference="rs6-JF-KeQ"/>
                                         <include reference="8MM-tt-tvr"/>
                                         <include reference="QPO-Q4-g14"/>
-                                        <include reference="rs6-JF-KeQ"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -248,7 +318,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLa-H9-VJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2058.75" y="407.625"/>
+            <point key="canvasLocation" x="2133.75" y="664.125"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="settings-icon.png" width="25" height="25"/>
+    </resources>
 </document>
