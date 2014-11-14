@@ -31,6 +31,7 @@
 		E7DB667E1A135BE700EBF97F /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E7DB667D1A135BE700EBF97F /* app-icon.png */; };
 		E7DB66801A142AA400EBF97F /* settings-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E7DB667F1A142AA400EBF97F /* settings-icon.png */; };
 		E7DB66981A15C53A00EBF97F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DB66971A15C53A00EBF97F /* SettingsViewController.m */; };
+		E7DB669B1A15D7A800EBF97F /* PaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DB669A1A15D7A800EBF97F /* PaymentViewController.m */; };
 		EE8ADE3413A2472873D8D048 /* libPods-StripeTestObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 289D9F602F80E5E06FA60D21 /* libPods-StripeTestObjC.a */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,8 @@
 		E7DB667F1A142AA400EBF97F /* settings-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-icon.png"; sourceTree = "<group>"; };
 		E7DB66961A15C53A00EBF97F /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		E7DB66971A15C53A00EBF97F /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		E7DB66991A15D7A800EBF97F /* PaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentViewController.h; sourceTree = "<group>"; };
+		E7DB669A1A15D7A800EBF97F /* PaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +154,8 @@
 				E78274821A1068C7002BDF58 /* Images.xcassets */,
 				E78274841A1068C7002BDF58 /* LaunchScreen.xib */,
 				E78274751A1068C7002BDF58 /* Supporting Files */,
+				E7DB66991A15D7A800EBF97F /* PaymentViewController.h */,
+				E7DB669A1A15D7A800EBF97F /* PaymentViewController.m */,
 			);
 			path = StripeTestObjC;
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 				E71938571A116017006E1910 /* OrgDetailViewController.m in Sources */,
 				E78274781A1068C7002BDF58 /* main.m in Sources */,
 				E7DB66981A15C53A00EBF97F /* SettingsViewController.m in Sources */,
+				E7DB669B1A15D7A800EBF97F /* PaymentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

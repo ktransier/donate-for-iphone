@@ -53,6 +53,7 @@
     request.paymentSummaryItems = @[[PKPaymentSummaryItem summaryItemWithLabel:label amount:amount]];
     
     if ([Stripe canSubmitPaymentRequest:request]) {
+        
         PKPaymentAuthorizationViewController *paymentController;
         paymentController = [[PKPaymentAuthorizationViewController alloc]
                              initWithPaymentRequest:request];

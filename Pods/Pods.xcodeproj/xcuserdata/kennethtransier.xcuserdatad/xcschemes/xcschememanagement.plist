@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-StripeTestObjC-PaymentKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-StripeTestObjC-SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1ED360B0DB343D506E27ACAA</key>
+		<key>081A403B3E49113C999E88A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>361B2C499F87108B3809CC90</key>
+		<key>25F8DAFCC5CC8CC1A9CEC501</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6E9504CE6514C94095546E66</key>
+		<key>5D734D1855548D3ED5F3FFBE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A33BADADC9BADA9D3E85D289</key>
+		<key>79DBBF5007598E3F487FB73C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C404E70CF706603F10040051</key>
+		<key>967A4FCBDDB822AE38BD2BE3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C183226464806953D0FEC3D7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

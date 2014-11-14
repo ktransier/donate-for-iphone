@@ -43,7 +43,28 @@ install_resource()
       ;;
   esac
 }
-
+          install_resource "PaymentKit/PaymentKit/Resources/Cards/amex.png"
+                    install_resource "PaymentKit/PaymentKit/Resources/Cards/amex@2x.png"
+                    install_resource "PaymentKit/PaymentKit/Resources/Cards/cvc-amex.png"
+                    install_resource "PaymentKit/PaymentKit/Resources/Cards/cvc-amex@2x.png"
+                    install_resource "PaymentKit/PaymentKit/Resources/Cards/cvc.png"
+                    install_resource "PaymentKit/PaymentKit/Resources/Cards/cvc@2x.png"
+                    install_resource "PaymentKit/PaymentKit/Resources/Cards/diners.png"
+                    install_resource "PaymentKit/PaymentKit/Resources/Cards/diners@2x.png"
+                    install_resource "PaymentKit/PaymentKit/Resources/Cards/discover.png"
+                    install_resource "PaymentKit/PaymentKit/Resources/Cards/discover@2x.png"
+                    install_resource "PaymentKit/PaymentKit/Resources/Cards/jcb.png"
+                    install_resource "PaymentKit/PaymentKit/Resources/Cards/jcb@2x.png"
+                    install_resource "PaymentKit/PaymentKit/Resources/Cards/mastercard.png"
+                    install_resource "PaymentKit/PaymentKit/Resources/Cards/mastercard@2x.png"
+                    install_resource "PaymentKit/PaymentKit/Resources/Cards/placeholder.png"
+                    install_resource "PaymentKit/PaymentKit/Resources/Cards/placeholder@2x.png"
+                    install_resource "PaymentKit/PaymentKit/Resources/Cards/visa.png"
+                    install_resource "PaymentKit/PaymentKit/Resources/Cards/visa@2x.png"
+                    install_resource "PaymentKit/PaymentKit/Resources/gradient@2x.png"
+                    install_resource "PaymentKit/PaymentKit/Resources/textfield.png"
+                    install_resource "PaymentKit/PaymentKit/Resources/textfield@2x.png"
+          
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 if [[ "${ACTION}" == "install" ]]; then
   rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${INSTALL_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

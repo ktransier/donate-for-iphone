@@ -312,7 +312,7 @@
                                     <rect key="frame" x="177" y="280" width="50" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-6" y="532" width="381" height="71"/>
+                                    <rect key="frame" x="0.0" y="532" width="381" height="71"/>
                                 </variation>
                                 <connections>
                                     <action selector="donateButton:" destination="0bf-ne-6dx" eventType="touchUpInside" id="m1m-e7-eDf"/>
