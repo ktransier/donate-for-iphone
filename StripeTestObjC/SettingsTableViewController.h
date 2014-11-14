@@ -1,5 +1,5 @@
 //
-//  SettingsViewController.h
+//  SettingsTableViewController.h
 //  StripeTestObjC
 //
 //  Created by Kenneth Transier on 11/13/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsViewController : UIViewController
+@interface SettingsTableViewController : UITableViewController
 
 @end
