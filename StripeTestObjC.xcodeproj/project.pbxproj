@@ -30,7 +30,7 @@
 		E7DB66721A11D49D00EBF97F /* maw.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7DB66711A11D49D00EBF97F /* maw.jpg */; };
 		E7DB667E1A135BE700EBF97F /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E7DB667D1A135BE700EBF97F /* app-icon.png */; };
 		E7DB66801A142AA400EBF97F /* settings-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E7DB667F1A142AA400EBF97F /* settings-icon.png */; };
-		E7DB66921A14ACC000EBF97F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DB66911A14ACC000EBF97F /* SettingsViewController.m */; };
+		E7DB66981A15C53A00EBF97F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DB66971A15C53A00EBF97F /* SettingsViewController.m */; };
 		EE8ADE3413A2472873D8D048 /* libPods-StripeTestObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 289D9F602F80E5E06FA60D21 /* libPods-StripeTestObjC.a */; };
 /* End PBXBuildFile section */
 
@@ -81,8 +81,8 @@
 		E7DB66711A11D49D00EBF97F /* maw.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = maw.jpg; sourceTree = "<group>"; };
 		E7DB667D1A135BE700EBF97F /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
 		E7DB667F1A142AA400EBF97F /* settings-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-icon.png"; sourceTree = "<group>"; };
-		E7DB66901A14ACC000EBF97F /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		E7DB66911A14ACC000EBF97F /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		E7DB66961A15C53A00EBF97F /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		E7DB66971A15C53A00EBF97F /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +135,8 @@
 		E78274741A1068C7002BDF58 /* StripeTestObjC */ = {
 			isa = PBXGroup;
 			children = (
+				E7DB66961A15C53A00EBF97F /* SettingsViewController.h */,
+				E7DB66971A15C53A00EBF97F /* SettingsViewController.m */,
 				E7DB665C1A11B7C100EBF97F /* models */,
 				E782749B1A106965002BDF58 /* StripeTestObjC.entitlements */,
 				E78274791A1068C7002BDF58 /* AppDelegate.h */,
@@ -149,8 +151,6 @@
 				E78274821A1068C7002BDF58 /* Images.xcassets */,
 				E78274841A1068C7002BDF58 /* LaunchScreen.xib */,
 				E78274751A1068C7002BDF58 /* Supporting Files */,
-				E7DB66901A14ACC000EBF97F /* SettingsViewController.h */,
-				E7DB66911A14ACC000EBF97F /* SettingsViewController.m */,
 			);
 			path = StripeTestObjC;
 			sourceTree = "<group>";
@@ -381,7 +381,7 @@
 				E782747B1A1068C7002BDF58 /* AppDelegate.m in Sources */,
 				E71938571A116017006E1910 /* OrgDetailViewController.m in Sources */,
 				E78274781A1068C7002BDF58 /* main.m in Sources */,
-				E7DB66921A14ACC000EBF97F /* SettingsViewController.m in Sources */,
+				E7DB66981A15C53A00EBF97F /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

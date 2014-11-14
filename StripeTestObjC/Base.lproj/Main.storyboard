@@ -29,7 +29,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ecf-hs-fkC">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="15" y="7" width="60" height="60"/>
+                                                        <rect key="frame" x="15" y="12" width="50" height="50"/>
                                                     </variation>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organization Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z58-oS-bCu">
@@ -38,7 +38,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="90" y="26" width="296" height="21"/>
+                                                        <rect key="frame" x="79" y="26" width="296" height="21"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
@@ -89,7 +89,7 @@
                         <nil key="title"/>
                         <barButtonItem key="rightBarButtonItem" image="settings-icon.png" id="nmh-Re-hBt">
                             <connections>
-                                <segue destination="UBW-fY-p3C" kind="show" id="BU8-oB-QwH"/>
+                                <segue destination="Fd3-bJ-soE" kind="presentation" id="BU8-oB-QwH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -100,9 +100,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1368" y="407.25"/>
+            <point key="canvasLocation" x="1378.5" y="413.25"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Settings-->
         <scene sceneID="y0m-cL-x0T">
             <objects>
                 <viewController id="UBW-fY-p3C" customClass="SettingsViewController" sceneMemberID="viewController">
@@ -111,61 +111,88 @@
                         <viewControllerLayoutGuide type="bottom" id="agj-AR-56n"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FhB-gf-QBt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gug-FV-KBW">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="70" width="368" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xDw-h4-9gU">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Q7-gx-804">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="27" y="13" width="42" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="example@gmail.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gug-FV-KBW">
+                                        <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="77" y="10" width="280" height="30"/>
+                                        </variation>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="3Q7-gx-804"/>
+                                        <exclude reference="Gug-FV-KBW"/>
+                                    </mask>
                                 </variation>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEj-88-8yd">
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="73" width="400" height="50"/>
+                                    <mask key="subviews">
+                                        <include reference="3Q7-gx-804"/>
+                                        <include reference="Gug-FV-KBW"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DONATION RECEIPTS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEj-88-8yd">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.29739583330000002" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="41" width="42" height="21"/>
+                                    <rect key="frame" x="26" y="44" width="172" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKg-Xx-XCq">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Save">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="165" y="127" width="34" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="saveSettings:" destination="UBW-fY-p3C" eventType="touchUpInside" id="afv-XY-yeR"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97068661451339722" green="0.97082573175430298" blue="0.97065621614456177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Gug-FV-KBW"/>
+                                <exclude reference="xDw-h4-9gU"/>
                                 <exclude reference="lEj-88-8yd"/>
-                                <exclude reference="zKg-Xx-XCq"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Gug-FV-KBW"/>
+                                <include reference="xDw-h4-9gU"/>
                                 <include reference="lEj-88-8yd"/>
-                                <include reference="zKg-Xx-XCq"/>
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Settings" id="Y1n-DM-BJg">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="Vm9-x4-r7Y">
+                            <connections>
+                                <action selector="closeSettings:" destination="UBW-fY-p3C" id="WLq-w6-agp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="XPX-gH-Cvj">
+                            <connections>
+                                <action selector="saveSettings:" destination="UBW-fY-p3C" id="Wug-Eb-tIY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailField" destination="Gug-FV-KBW" id="6bk-ES-VYx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JjR-S6-WJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2067" y="-171.75"/>
+            <point key="canvasLocation" x="2985" y="-171.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cOF-AC-10e">
@@ -319,6 +346,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLa-H9-VJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2133.75" y="664.125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fiH-yf-E8J">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fd3-bJ-soE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="sGY-dP-XVf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UBW-fY-p3C" kind="relationship" relationship="rootViewController" id="8fj-FY-Tjm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Rk-Vn-rls" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2067" y="-171.75"/>
         </scene>
     </scenes>
     <resources>

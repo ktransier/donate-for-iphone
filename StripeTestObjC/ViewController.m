@@ -78,7 +78,7 @@
                        placeholderImage:[UIImage imageNamed:@"app-icon.png"]];
         
         
-        cell.image.layer.cornerRadius = 30.0;
+        cell.image.layer.cornerRadius = 25.0;
         cell.image.clipsToBounds = true;
         return cell;
     }
