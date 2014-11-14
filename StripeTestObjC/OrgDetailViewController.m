@@ -118,7 +118,7 @@
     NSURL *url = [NSURL URLWithString:@"http://donate-rails.herokuapp.com/donations/token"];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     request.HTTPMethod = @"POST";
-    NSString *body     = [NSString stringWithFormat:@"stripeToken=%@&selectedOrg=%@&email=%@", token.tokenId, self.org[@"name"], email];
+    NSString *body     = [NSString stringWithFormat:@"stripe_token=%@&organization=%@&email=%@&amount=%@", token.tokenId, self.org[@"name"], email, self.donationAmount.text];
     request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];
     
     [NSURLConnection sendAsynchronousRequest:request
