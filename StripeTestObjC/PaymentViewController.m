@@ -7,17 +7,19 @@
 //
 
 #import "PaymentViewController.h"
+#import "Stripe.h"
 #import "PTKView.h"
 
 @interface PaymentViewController ()<PTKViewDelegate>
 @property(weak, nonatomic) PTKView *paymentView;
+@property (weak, nonatomic) IBOutlet UIButton *confirmDonationButton;
 @end
 
 @implementation PaymentViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    PTKView *view = [[PTKView alloc] initWithFrame:CGRectMake(15,20,290,55)];
+    PTKView *view = [[PTKView alloc] initWithFrame:CGRectMake(15,70,290,55)];
     self.paymentView = view;
     self.paymentView.delegate = self;
     [self.view addSubview:self.paymentView];
@@ -27,10 +29,55 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)closeButton:(id)sender {
+  [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)paymentView:(PTKView *)view withCard:(PTKCard *)card isValid:(BOOL)valid
 {
+    // Toggle navigation, for example
+    self.confirmDonationButton.enabled = valid;
+}
 
+
+- (IBAction)confirmDonationButton:(id)sender {
+    STPCard *card = [[STPCard alloc] init];
+    card.number = self.paymentView.card.number;
+    card.expMonth = self.paymentView.card.expMonth;
+    card.expYear = self.paymentView.card.expYear;
+    card.cvc = self.paymentView.card.cvc;
+    [Stripe createTokenWithCard:card completion:^(STPToken *token, NSError *error) {
+        if (error) {
+//            [self handleError:error];
+        } else {
+            [self createBackendChargeWithToken:token];
+        }
+    }];
+}
+
+- (void)createBackendChargeWithToken:(STPToken *)token {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString* email = [defaults objectForKey:@"email"];
+    
+    NSURL *url = [NSURL URLWithString:@"http://donate-rails.herokuapp.com/donations/token"];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    request.HTTPMethod = @"POST";
+    NSString *body     = [NSString stringWithFormat:@"stripe_token=%@&organization=%@&email=%@&amount=%@", token.tokenId, @"HRW", email, @"25"];
+    request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];
+    
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response,
+                                               NSData *data,
+                                               NSError *error) {
+                               if (error) {
+
+                               } else {
+                                  [self.view endEditing:YES];
+                                  [self dismissViewControllerAnimated:YES completion:nil];
+                               }
+                           }];
 }
 
 /*

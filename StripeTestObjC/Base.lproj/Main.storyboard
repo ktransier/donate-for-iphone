@@ -9,6 +9,7 @@
             <objects>
                 <tableViewController id="Bnr-1O-HA5" customClass="OrganizationsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" id="jjw-oV-TKD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -166,6 +167,57 @@
             </objects>
             <point key="canvasLocation" x="2892" y="-29.25"/>
         </scene>
+        <!--Payment View Controller-->
+        <scene sceneID="l01-ae-UNe">
+            <objects>
+                <viewController id="mhh-XA-9iA" customClass="PaymentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b8a-Is-j3X"/>
+                        <viewControllerLayoutGuide type="bottom" id="F9G-En-2yg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pmH-es-71d">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1FJ-jY-dzo">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Confirm Donation">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="127" y="211" width="121" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="confirmDonationButton:" destination="mhh-XA-9iA" eventType="touchUpInside" id="5zg-94-MaO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="1FJ-jY-dzo"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="1FJ-jY-dzo"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="swF-2m-zwZ">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="xh0-0S-jux">
+                            <connections>
+                                <action selector="closeButton:" destination="mhh-XA-9iA" id="OFX-wu-ABO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="confirmDonationButton" destination="1FJ-jY-dzo" id="wmU-UT-rbO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="axg-CG-BEQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3732.75" y="1567.875"/>
+        </scene>
         <!--Org Detail View Controller-->
         <scene sceneID="pI2-HE-AzU">
             <objects>
@@ -310,11 +362,12 @@
                         <outlet property="orgImage" destination="rs6-JF-KeQ" id="cdT-ec-Yzf"/>
                         <outlet property="orgNameLabel" destination="7qC-We-GmB" id="bV9-vO-Ld3"/>
                         <outlet property="webButton" destination="Rls-FH-uez" id="JrN-yS-NyT"/>
+                        <segue destination="BRY-By-Z1f" kind="modal" identifier="showStripeForm" id="We7-bO-6jJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLa-H9-VJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2170.5" y="822.5"/>
+            <point key="canvasLocation" x="2112.75" y="1276.875"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="M6h-s6-9Mw">
@@ -325,6 +378,7 @@
                         <viewControllerLayoutGuide type="bottom" id="mRC-WP-yG8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="weZ-Sh-MI6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wCR-gd-3xV">
@@ -356,7 +410,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSY-LW-BaV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2879.5" y="822.5"/>
+            <point key="canvasLocation" x="2852.25" y="916.875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fiH-yf-E8J">
@@ -397,6 +451,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pE5-gm-rRa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="748" y="402"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="O1N-ht-PdB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BRY-By-Z1f" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="fz8-bo-U3X">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mhh-XA-9iA" kind="relationship" relationship="rootViewController" id="FO4-04-dA1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lQr-ar-YDp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2871" y="1567.5"/>
         </scene>
     </scenes>
     <resources>

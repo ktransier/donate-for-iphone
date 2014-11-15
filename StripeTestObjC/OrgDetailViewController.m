@@ -52,16 +52,16 @@
     NSDecimalNumber *amount = [NSDecimalNumber decimalNumberWithString:self.donationAmount.text];
     request.paymentSummaryItems = @[[PKPaymentSummaryItem summaryItemWithLabel:label amount:amount]];
     
-    if ([Stripe canSubmitPaymentRequest:request]) {
-        
-        PKPaymentAuthorizationViewController *paymentController;
-        paymentController = [[PKPaymentAuthorizationViewController alloc]
-                             initWithPaymentRequest:request];
-        [self presentViewController:paymentController animated:YES completion:nil];
-        paymentController.delegate = self;
-    } else {
-        // Show the user your own credit card form (see options 2 or 3)
-    }
+//    if ([Stripe canSubmitPaymentRequest:request]) {
+//        
+//        PKPaymentAuthorizationViewController *paymentController;
+//        paymentController = [[PKPaymentAuthorizationViewController alloc]
+//                             initWithPaymentRequest:request];
+//        [self presentViewController:paymentController animated:YES completion:nil];
+//        paymentController.delegate = self;
+//    } else {
+        [self performSegueWithIdentifier: @"showStripeForm" sender: self];
+//    }
 
 }
 
