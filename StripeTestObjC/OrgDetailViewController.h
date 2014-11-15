@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Organization.h"
 
 @interface OrgDetailViewController : UIViewController
     @property(nonatomic, strong) NSDictionary* org;

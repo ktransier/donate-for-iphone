@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		E71938571A116017006E1910 /* OrgDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E71938561A116017006E1910 /* OrgDetailViewController.m */; };
+		E754BACB1A15FC5E0051A838 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E754BACA1A15FC5E0051A838 /* WebViewController.m */; };
+		E754BACE1A167E9A0051A838 /* OrganizationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E754BACD1A167E9A0051A838 /* OrganizationsTableViewController.m */; };
 		E78274781A1068C7002BDF58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E78274771A1068C7002BDF58 /* main.m */; };
 		E782747B1A1068C7002BDF58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E782747A1A1068C7002BDF58 /* AppDelegate.m */; };
-		E782747E1A1068C7002BDF58 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E782747D1A1068C7002BDF58 /* ViewController.m */; };
 		E78274811A1068C7002BDF58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E782747F1A1068C7002BDF58 /* Main.storyboard */; };
 		E78274831A1068C7002BDF58 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E78274821A1068C7002BDF58 /* Images.xcassets */; };
 		E78274861A1068C7002BDF58 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78274841A1068C7002BDF58 /* LaunchScreen.xib */; };
@@ -51,13 +52,15 @@
 		9A6FE553E43E6A4A4202FDB1 /* Pods-StripeTestObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StripeTestObjC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StripeTestObjC/Pods-StripeTestObjC.debug.xcconfig"; sourceTree = "<group>"; };
 		E71938551A116016006E1910 /* OrgDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrgDetailViewController.h; sourceTree = "<group>"; };
 		E71938561A116017006E1910 /* OrgDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrgDetailViewController.m; sourceTree = "<group>"; };
+		E754BAC91A15FC5E0051A838 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		E754BACA1A15FC5E0051A838 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		E754BACC1A167E9A0051A838 /* OrganizationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrganizationsTableViewController.h; sourceTree = "<group>"; };
+		E754BACD1A167E9A0051A838 /* OrganizationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrganizationsTableViewController.m; sourceTree = "<group>"; };
 		E78274721A1068C7002BDF58 /* StripeTestObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StripeTestObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78274761A1068C7002BDF58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E78274771A1068C7002BDF58 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E78274791A1068C7002BDF58 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E782747A1A1068C7002BDF58 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E782747C1A1068C7002BDF58 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E782747D1A1068C7002BDF58 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E78274801A1068C7002BDF58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E78274821A1068C7002BDF58 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E78274851A1068C7002BDF58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -144,11 +147,11 @@
 				E782749B1A106965002BDF58 /* StripeTestObjC.entitlements */,
 				E78274791A1068C7002BDF58 /* AppDelegate.h */,
 				E782747A1A1068C7002BDF58 /* AppDelegate.m */,
-				E782747C1A1068C7002BDF58 /* ViewController.h */,
-				E782747D1A1068C7002BDF58 /* ViewController.m */,
 				E71938551A116016006E1910 /* OrgDetailViewController.h */,
 				E71938561A116017006E1910 /* OrgDetailViewController.m */,
 				E782747F1A1068C7002BDF58 /* Main.storyboard */,
+				E754BACC1A167E9A0051A838 /* OrganizationsTableViewController.h */,
+				E754BACD1A167E9A0051A838 /* OrganizationsTableViewController.m */,
 				E7DB66461A11937400EBF97F /* OrgCell.h */,
 				E7DB66471A11937400EBF97F /* OrgCell.m */,
 				E78274821A1068C7002BDF58 /* Images.xcassets */,
@@ -156,6 +159,8 @@
 				E78274751A1068C7002BDF58 /* Supporting Files */,
 				E7DB66991A15D7A800EBF97F /* PaymentViewController.h */,
 				E7DB669A1A15D7A800EBF97F /* PaymentViewController.m */,
+				E754BAC91A15FC5E0051A838 /* WebViewController.h */,
+				E754BACA1A15FC5E0051A838 /* WebViewController.m */,
 			);
 			path = StripeTestObjC;
 			sourceTree = "<group>";
@@ -380,10 +385,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E754BACE1A167E9A0051A838 /* OrganizationsTableViewController.m in Sources */,
 				E7DB665B1A11B7B200EBF97F /* Organization.m in Sources */,
-				E782747E1A1068C7002BDF58 /* ViewController.m in Sources */,
 				E7DB66481A11937400EBF97F /* OrgCell.m in Sources */,
 				E782747B1A1068C7002BDF58 /* AppDelegate.m in Sources */,
+				E754BACB1A15FC5E0051A838 /* WebViewController.m in Sources */,
 				E71938571A116017006E1910 /* OrgDetailViewController.m in Sources */,
 				E78274781A1068C7002BDF58 /* main.m in Sources */,
 				E7DB66981A15C53A00EBF97F /* SettingsViewController.m in Sources */,

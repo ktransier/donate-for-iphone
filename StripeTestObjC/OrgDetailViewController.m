@@ -7,6 +7,7 @@
 //
 
 #import "OrgDetailViewController.h"
+#import "WebViewController.h"
 #import "Stripe.h"
 #import "Stripe+ApplePay.h"
 
@@ -17,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *orgImage;
 @property (weak, nonatomic) IBOutlet UILabel *orgContentLabel;
 @property (weak, nonatomic) IBOutlet UIButton *donateButton;
-@property CGPoint originalCenter;
+@property (weak, nonatomic) IBOutlet UIButton *webButton;
 
 @end
 
@@ -28,6 +29,7 @@
     // Do any additional setup after loading the view.
     
     self.orgNameLabel.text = self.org[@"name"];
+    [self.webButton setTitle:self.org[@"url"] forState:UIControlStateNormal];
     self.orgContentLabel.text = self.org[@"content"];
     NSString* fullImageUrl = @"http://donate-rails.herokuapp.com/org-images/";
     
@@ -38,8 +40,6 @@
     self.orgImage.clipsToBounds = true;
     
     self.donateButton.backgroundColor = [UIColor colorWithRed:0.22 green:0.259 blue:0.318 alpha:1];
-    
-    self.originalCenter = self.view.center;
     
 }
 
@@ -139,6 +139,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+// Pass cell details to org detail view controller
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqual:@"showWebView"]) {
+        WebViewController* destinationViewController = segue.destinationViewController;
+        destinationViewController.url = self.org[@"url"];
+    }
 }
 
 @end
