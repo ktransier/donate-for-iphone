@@ -39,6 +39,7 @@ NSArray *orgArray;
                             action:@selector(makeOrganizationsRequest)
                   forControlEvents:UIControlEventValueChanged];
     
+
 }
 
 - (void)reloadData
@@ -55,7 +56,7 @@ NSArray *orgArray;
 -(void)awakeFromNib {
     [super awakeFromNib];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.22 green:0.259 blue:0.318 alpha:1]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.306 green:0.478 blue:0.682 alpha:1]];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *orgContentLabel;
 @property (weak, nonatomic) IBOutlet UIButton *donateButton;
 @property (weak, nonatomic) IBOutlet UIButton *webButton;
+@property (weak, nonatomic) IBOutlet UIButton *donationAmountButton;
 
 @end
 
@@ -29,7 +30,6 @@
     // Do any additional setup after loading the view.
     
     self.orgNameLabel.text = self.org[@"name"];
-    [self.webButton setTitle:self.org[@"url"] forState:UIControlStateNormal];
     self.orgContentLabel.text = self.org[@"content"];
     NSString* fullImageUrl = @"http://donate-rails.herokuapp.com/org-images/";
     
@@ -39,9 +39,10 @@
     self.orgImage.layer.cornerRadius = 100.0;
     self.orgImage.clipsToBounds = true;
     
-    self.donateButton.backgroundColor = [UIColor colorWithRed:0.22 green:0.259 blue:0.318 alpha:1];
+    self.donateButton.backgroundColor = [UIColor colorWithRed:0.306 green:0.478 blue:0.682 alpha:1];
     
 }
+
 
 - (IBAction)donateButton:(id)sender {
     [self.donationAmount resignFirstResponder];
@@ -52,16 +53,16 @@
     NSDecimalNumber *amount = [NSDecimalNumber decimalNumberWithString:self.donationAmount.text];
     request.paymentSummaryItems = @[[PKPaymentSummaryItem summaryItemWithLabel:label amount:amount]];
     
-//    if ([Stripe canSubmitPaymentRequest:request]) {
-//        
-//        PKPaymentAuthorizationViewController *paymentController;
-//        paymentController = [[PKPaymentAuthorizationViewController alloc]
-//                             initWithPaymentRequest:request];
-//        [self presentViewController:paymentController animated:YES completion:nil];
-//        paymentController.delegate = self;
-//    } else {
+    if ([Stripe canSubmitPaymentRequest:request]) {
+        
+        PKPaymentAuthorizationViewController *paymentController;
+        paymentController = [[PKPaymentAuthorizationViewController alloc]
+                             initWithPaymentRequest:request];
+        [self presentViewController:paymentController animated:YES completion:nil];
+        paymentController.delegate = self;
+    } else {
         [self performSegueWithIdentifier: @"showStripeForm" sender: self];
-//    }
+    }
 
 }
 
