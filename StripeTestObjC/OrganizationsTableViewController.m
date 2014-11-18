@@ -26,14 +26,14 @@ NSArray *orgArray;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"Non-Profits";
+    self.navigationItem.title = @"Together";
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     [self makeOrganizationsRequest];
     
     
     self.refreshControl = [[UIRefreshControl alloc] init];
-    self.refreshControl.backgroundColor = [UIColor colorWithRed:0.22 green:0.259 blue:0.318 alpha:1];
+    self.refreshControl.backgroundColor = [UIColor colorWithRed:0.937 green:0.282 blue:0.282 alpha:1];
     self.refreshControl.tintColor = [UIColor whiteColor];
     [self.refreshControl addTarget:self
                             action:@selector(makeOrganizationsRequest)
@@ -56,7 +56,7 @@ NSArray *orgArray;
 -(void)awakeFromNib {
     [super awakeFromNib];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.306 green:0.478 blue:0.682 alpha:1]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -71,7 +71,7 @@ NSArray *orgArray;
 
 -(void)makeOrganizationsRequest
 {
-    NSURL *url = [NSURL URLWithString:@"http://donate-rails.herokuapp.com/organizations.json"];
+    NSURL *url = [NSURL URLWithString:@"https://togetherapp.org/organizations.json"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     //AFNetworking asynchronous url request
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
@@ -94,7 +94,8 @@ NSArray *orgArray;
     OrgCell *cell = [tableView dequeueReusableCellWithIdentifier:orgCellIdentifier];
     NSDictionary* org = [orgArray objectAtIndex:indexPath.row];
     cell.orgNameLabel.text = org[@"name"];
-    NSString* fullImageURL = @"http://donate-rails.herokuapp.com/org-images/";
+    cell.orgContentLabel.text = org[@"content"];
+    NSString* fullImageURL = @"https://togetherapp.org/org-images/";
     NSString* imageURL = org[@"image_url"];
     fullImageURL = [fullImageURL stringByAppendingString:imageURL];
     
@@ -103,6 +104,8 @@ NSArray *orgArray;
     
     
     cell.image.layer.cornerRadius = 25.0;
+    cell.image.layer.borderWidth = 1.0;
+    cell.image.layer.borderColor = [UIColor colorWithRed:0.855 green:0.875 blue:0.882 alpha:1].CGColor;
     cell.image.clipsToBounds = true;
     return cell;
 }

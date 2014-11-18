@@ -16,6 +16,10 @@
 		E78274831A1068C7002BDF58 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E78274821A1068C7002BDF58 /* Images.xcassets */; };
 		E78274861A1068C7002BDF58 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78274841A1068C7002BDF58 /* LaunchScreen.xib */; };
 		E78274921A1068C7002BDF58 /* StripeTestObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E78274911A1068C7002BDF58 /* StripeTestObjCTests.m */; };
+		E789D5DF1A19B9D500B0801C /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E789D5DE1A19B9D500B0801C /* app-icon.png */; };
+		E789D5E11A19BC5900B0801C /* app-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E789D5E01A19BC5900B0801C /* app-logo.png */; };
+		E789D5E31A19DBCE00B0801C /* app-logo-3.png in Resources */ = {isa = PBXBuildFile; fileRef = E789D5E21A19DBCE00B0801C /* app-logo-3.png */; };
+		E789D5E91A1B28EF00B0801C /* settings-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E789D5E81A1B28EF00B0801C /* settings-icon.png */; };
 		E7DB66481A11937400EBF97F /* OrgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DB66471A11937400EBF97F /* OrgCell.m */; };
 		E7DB664B1A11B51000EBF97F /* ushahidi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7DB664A1A11B51000EBF97F /* ushahidi.jpg */; };
 		E7DB664D1A11B51A00EBF97F /* hrw.png in Resources */ = {isa = PBXBuildFile; fileRef = E7DB664C1A11B51A00EBF97F /* hrw.png */; };
@@ -29,8 +33,6 @@
 		E7DB666E1A11D3E900EBF97F /* amnesty.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7DB666D1A11D3E900EBF97F /* amnesty.jpg */; };
 		E7DB66701A11D44300EBF97F /* americanredcross.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7DB666F1A11D44300EBF97F /* americanredcross.jpg */; };
 		E7DB66721A11D49D00EBF97F /* maw.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7DB66711A11D49D00EBF97F /* maw.jpg */; };
-		E7DB667E1A135BE700EBF97F /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E7DB667D1A135BE700EBF97F /* app-icon.png */; };
-		E7DB66801A142AA400EBF97F /* settings-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E7DB667F1A142AA400EBF97F /* settings-icon.png */; };
 		E7DB66981A15C53A00EBF97F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DB66971A15C53A00EBF97F /* SettingsViewController.m */; };
 		E7DB669B1A15D7A800EBF97F /* PaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DB669A1A15D7A800EBF97F /* PaymentViewController.m */; };
 		EE8ADE3413A2472873D8D048 /* libPods-StripeTestObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 289D9F602F80E5E06FA60D21 /* libPods-StripeTestObjC.a */; };
@@ -68,6 +70,10 @@
 		E78274901A1068C7002BDF58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E78274911A1068C7002BDF58 /* StripeTestObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StripeTestObjCTests.m; sourceTree = "<group>"; };
 		E782749B1A106965002BDF58 /* StripeTestObjC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = StripeTestObjC.entitlements; sourceTree = "<group>"; };
+		E789D5DE1A19B9D500B0801C /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
+		E789D5E01A19BC5900B0801C /* app-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-logo.png"; sourceTree = "<group>"; };
+		E789D5E21A19DBCE00B0801C /* app-logo-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-logo-3.png"; sourceTree = "<group>"; };
+		E789D5E81A1B28EF00B0801C /* settings-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-icon.png"; sourceTree = "<group>"; };
 		E7DB66461A11937400EBF97F /* OrgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrgCell.h; sourceTree = "<group>"; };
 		E7DB66471A11937400EBF97F /* OrgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrgCell.m; sourceTree = "<group>"; };
 		E7DB664A1A11B51000EBF97F /* ushahidi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ushahidi.jpg; sourceTree = "<group>"; };
@@ -83,8 +89,6 @@
 		E7DB666D1A11D3E900EBF97F /* amnesty.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = amnesty.jpg; sourceTree = "<group>"; };
 		E7DB666F1A11D44300EBF97F /* americanredcross.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = americanredcross.jpg; sourceTree = "<group>"; };
 		E7DB66711A11D49D00EBF97F /* maw.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = maw.jpg; sourceTree = "<group>"; };
-		E7DB667D1A135BE700EBF97F /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
-		E7DB667F1A142AA400EBF97F /* settings-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-icon.png"; sourceTree = "<group>"; };
 		E7DB66961A15C53A00EBF97F /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		E7DB66971A15C53A00EBF97F /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		E7DB66991A15D7A800EBF97F /* PaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentViewController.h; sourceTree = "<group>"; };
@@ -141,26 +145,26 @@
 		E78274741A1068C7002BDF58 /* StripeTestObjC */ = {
 			isa = PBXGroup;
 			children = (
-				E7DB66961A15C53A00EBF97F /* SettingsViewController.h */,
-				E7DB66971A15C53A00EBF97F /* SettingsViewController.m */,
 				E7DB665C1A11B7C100EBF97F /* models */,
 				E782749B1A106965002BDF58 /* StripeTestObjC.entitlements */,
 				E78274791A1068C7002BDF58 /* AppDelegate.h */,
 				E782747A1A1068C7002BDF58 /* AppDelegate.m */,
-				E71938551A116016006E1910 /* OrgDetailViewController.h */,
-				E71938561A116017006E1910 /* OrgDetailViewController.m */,
-				E782747F1A1068C7002BDF58 /* Main.storyboard */,
 				E754BACC1A167E9A0051A838 /* OrganizationsTableViewController.h */,
 				E754BACD1A167E9A0051A838 /* OrganizationsTableViewController.m */,
 				E7DB66461A11937400EBF97F /* OrgCell.h */,
 				E7DB66471A11937400EBF97F /* OrgCell.m */,
-				E78274821A1068C7002BDF58 /* Images.xcassets */,
-				E78274841A1068C7002BDF58 /* LaunchScreen.xib */,
-				E78274751A1068C7002BDF58 /* Supporting Files */,
+				E71938551A116016006E1910 /* OrgDetailViewController.h */,
+				E71938561A116017006E1910 /* OrgDetailViewController.m */,
 				E7DB66991A15D7A800EBF97F /* PaymentViewController.h */,
 				E7DB669A1A15D7A800EBF97F /* PaymentViewController.m */,
 				E754BAC91A15FC5E0051A838 /* WebViewController.h */,
 				E754BACA1A15FC5E0051A838 /* WebViewController.m */,
+				E7DB66961A15C53A00EBF97F /* SettingsViewController.h */,
+				E7DB66971A15C53A00EBF97F /* SettingsViewController.m */,
+				E782747F1A1068C7002BDF58 /* Main.storyboard */,
+				E78274821A1068C7002BDF58 /* Images.xcassets */,
+				E78274841A1068C7002BDF58 /* LaunchScreen.xib */,
+				E78274751A1068C7002BDF58 /* Supporting Files */,
 			);
 			path = StripeTestObjC;
 			sourceTree = "<group>";
@@ -168,8 +172,10 @@
 		E78274751A1068C7002BDF58 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E7DB667F1A142AA400EBF97F /* settings-icon.png */,
-				E7DB667D1A135BE700EBF97F /* app-icon.png */,
+				E789D5E81A1B28EF00B0801C /* settings-icon.png */,
+				E789D5E21A19DBCE00B0801C /* app-logo-3.png */,
+				E789D5E01A19BC5900B0801C /* app-logo.png */,
+				E789D5DE1A19B9D500B0801C /* app-icon.png */,
 				E7DB66491A11B4DB00EBF97F /* Organizations */,
 				E78274761A1068C7002BDF58 /* Info.plist */,
 				E78274771A1068C7002BDF58 /* main.m */,
@@ -319,16 +325,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7DB66801A142AA400EBF97F /* settings-icon.png in Resources */,
 				E7DB666C1A11CC9000EBF97F /* habitat.jpg in Resources */,
+				E789D5E91A1B28EF00B0801C /* settings-icon.png in Resources */,
 				E7DB66531A11B57000EBF97F /* girlswhocode.png in Resources */,
 				E7DB665E1A11C4D800EBF97F /* malala.jpg in Resources */,
 				E78274811A1068C7002BDF58 /* Main.storyboard in Resources */,
 				E7DB66701A11D44300EBF97F /* americanredcross.jpg in Resources */,
+				E789D5E31A19DBCE00B0801C /* app-logo-3.png in Resources */,
+				E789D5DF1A19B9D500B0801C /* app-icon.png in Resources */,
 				E78274861A1068C7002BDF58 /* LaunchScreen.xib in Resources */,
+				E789D5E11A19BC5900B0801C /* app-logo.png in Resources */,
 				E7DB664F1A11B53B00EBF97F /* charitywater.jpg in Resources */,
 				E7DB66601A11C5F300EBF97F /* wwp.jpg in Resources */,
-				E7DB667E1A135BE700EBF97F /* app-icon.png in Resources */,
 				E7DB66511A11B54B00EBF97F /* msf.jpg in Resources */,
 				E7DB664D1A11B51A00EBF97F /* hrw.png in Resources */,
 				E7DB66721A11D49D00EBF97F /* maw.jpg in Resources */,

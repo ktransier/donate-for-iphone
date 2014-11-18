@@ -10,16 +10,16 @@
 #import "WebViewController.h"
 #import "Stripe.h"
 #import "Stripe+ApplePay.h"
+#import <QuartzCore/QuartzCore.h>
 
-@interface OrgDetailViewController () <PKPaymentAuthorizationViewControllerDelegate>
+@interface OrgDetailViewController () <PKPaymentAuthorizationViewControllerDelegate, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *orgNameLabel;
 @property (weak, nonatomic) IBOutlet UITextField *donationAmount;
 @property (weak, nonatomic) IBOutlet UIImageView *orgImage;
-@property (weak, nonatomic) IBOutlet UILabel *orgContentLabel;
 @property (weak, nonatomic) IBOutlet UIButton *donateButton;
 @property (weak, nonatomic) IBOutlet UIButton *webButton;
-@property (weak, nonatomic) IBOutlet UIButton *donationAmountButton;
+@property (weak, nonatomic) IBOutlet UITextView *orgContentTextView;
 
 @end
 
@@ -27,20 +27,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.donationAmount.delegate = self;
     // Do any additional setup after loading the view.
     
     self.orgNameLabel.text = self.org[@"name"];
-    self.orgContentLabel.text = self.org[@"content"];
-    NSString* fullImageUrl = @"http://donate-rails.herokuapp.com/org-images/";
+    self.orgContentTextView.text = self.org[@"content"];
+    [self.webButton setTitle:self.org[@"home_url"]forState:UIControlStateNormal];
+    NSString* fullImageUrl = @"https://togetherapp.org/org-images/";
     
     NSString* imageURL = self.org[@"image_url"];
     fullImageUrl = [fullImageUrl stringByAppendingString:imageURL];
     self.orgImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:fullImageUrl]]];
     self.orgImage.layer.cornerRadius = 100.0;
+    self.orgImage.layer.borderWidth = 1.0;
+    self.orgImage.layer.borderColor = [UIColor colorWithRed:0.855 green:0.875 blue:0.882 alpha:1].CGColor;
     self.orgImage.clipsToBounds = true;
+//    
+//    self.donateButton.backgroundColor = [UIColor colorWithRed:0.306 green:0.478 blue:0.682 alpha:1];
+    self.donateButton.layer.borderColor = [[UIColor colorWithRed:0.306 green:0.478 blue:0.682 alpha:1] CGColor];
+    self.donateButton.layer.borderWidth=2.0f;
+    self.donateButton.layer.cornerRadius=8.0f;
     
-    self.donateButton.backgroundColor = [UIColor colorWithRed:0.306 green:0.478 blue:0.682 alpha:1];
-    
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range     replacementString:(NSString *)string
+{
+    if (textField.text.length >= 4 && range.length == 0)
+        return NO;
+    return YES;
 }
 
 
@@ -53,16 +67,16 @@
     NSDecimalNumber *amount = [NSDecimalNumber decimalNumberWithString:self.donationAmount.text];
     request.paymentSummaryItems = @[[PKPaymentSummaryItem summaryItemWithLabel:label amount:amount]];
     
-    if ([Stripe canSubmitPaymentRequest:request]) {
-        
-        PKPaymentAuthorizationViewController *paymentController;
-        paymentController = [[PKPaymentAuthorizationViewController alloc]
-                             initWithPaymentRequest:request];
-        [self presentViewController:paymentController animated:YES completion:nil];
-        paymentController.delegate = self;
-    } else {
+//    if ([Stripe canSubmitPaymentRequest:request]) {
+//        
+//        PKPaymentAuthorizationViewController *paymentController;
+//        paymentController = [[PKPaymentAuthorizationViewController alloc]
+//                             initWithPaymentRequest:request];
+//        [self presentViewController:paymentController animated:YES completion:nil];
+//        paymentController.delegate = self;
+//    } else {
         [self performSegueWithIdentifier: @"showStripeForm" sender: self];
-    }
+//    }
 
 }
 
@@ -117,7 +131,7 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString* email = [defaults objectForKey:@"email"];
     
-    NSURL *url = [NSURL URLWithString:@"http://donate-rails.herokuapp.com/donations/token"];
+    NSURL *url = [NSURL URLWithString:@"https://togetherapp.org/donations/token"];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     request.HTTPMethod = @"POST";
     NSString *body     = [NSString stringWithFormat:@"stripe_token=%@&organization=%@&email=%@&amount=%@", token.tokenId, self.org[@"name"], email, self.donationAmount.text];

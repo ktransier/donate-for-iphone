@@ -19,10 +19,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    PTKView *view = [[PTKView alloc] initWithFrame:CGRectMake(15,70,290,55)];
+    PTKView *view = [[PTKView alloc] initWithFrame:CGRectMake(42.5,70,290,55)];
     self.paymentView = view;
     self.paymentView.delegate = self;
     [self.view addSubview:self.paymentView];
+    self.confirmDonationButton.layer.borderWidth=2.0f;
+    self.confirmDonationButton.layer.cornerRadius=8.0f;
+    self.confirmDonationButton.layer.borderColor = [[UIColor colorWithRed:0.91 green:0.91 blue:0.91 alpha:1] CGColor];
+    [self.confirmDonationButton setTitleColor:[UIColor colorWithRed:0.91 green:0.91 blue:0.91 alpha:1] forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,6 +41,8 @@
 {
     // Toggle navigation, for example
     self.confirmDonationButton.enabled = valid;
+    self.confirmDonationButton.layer.borderColor = [[UIColor colorWithRed:0.306 green:0.478 blue:0.682 alpha:1] CGColor];
+    [self.confirmDonationButton setTitleColor:[UIColor colorWithRed:0.306 green:0.478 blue:0.682 alpha:1] forState:UIControlStateNormal];
 }
 
 
@@ -60,7 +66,7 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString* email = [defaults objectForKey:@"email"];
     
-    NSURL *url = [NSURL URLWithString:@"http://donate-rails.herokuapp.com/donations/token"];
+    NSURL *url = [NSURL URLWithString:@"https://togetherapp.org/donations/token"];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     request.HTTPMethod = @"POST";
     NSString *body     = [NSString stringWithFormat:@"stripe_token=%@&organization=%@&email=%@&amount=%@", token.tokenId, @"HRW", email, @"25"];
