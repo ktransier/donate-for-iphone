@@ -129,16 +129,7 @@
                                 <color key="textColor" white="0.29739583330000002" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="26" y="44" width="172" height="21"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DONATION RECEIPTS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gqf-vi-NDl">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" white="0.29739583330000002" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="36" y="54" width="172" height="21"/>
+                                    <rect key="frame" x="26" y="47" width="172" height="21"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -147,14 +138,12 @@
                             <mask key="subviews">
                                 <exclude reference="xDw-h4-9gU"/>
                                 <exclude reference="lEj-88-8yd"/>
-                                <exclude reference="Gqf-vi-NDl"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="xDw-h4-9gU"/>
                                 <include reference="lEj-88-8yd"/>
-                                <include reference="Gqf-vi-NDl"/>
                             </mask>
                         </variation>
                     </view>
