@@ -10,6 +10,8 @@ target 'StripeTestObjC' do
     pod 'AFNetworking'
     pod 'SDWebImage'
     pod 'TPKeyboardAvoiding'
+    pod 'TSMessages'
+    pod 'HexColors'
 end
 
 target 'StripeTestObjCTests' do

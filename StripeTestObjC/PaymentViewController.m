@@ -80,8 +80,10 @@
                                                NSData *data,
                                                NSError *error) {
                                if (error) {
+                                   NSLog(@"Error message: %@", error);
 
                                } else {
+                                  NSLog(@"Error message: %@", response);
                                   [self.view endEditing:YES];
                                   [self dismissViewControllerAnimated:YES completion:nil];
                                }

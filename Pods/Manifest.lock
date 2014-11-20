@@ -1,49 +1,56 @@
 PODS:
-  - AFNetworking (2.4.1):
+  - AFNetworking (2.5.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
     - AFNetworking/UIKit
-  - AFNetworking/NSURLConnection (2.4.1):
+  - AFNetworking/NSURLConnection (2.5.0):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.4.1):
+  - AFNetworking/NSURLSession (2.5.0):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.4.1)
-  - AFNetworking/Security (2.4.1)
-  - AFNetworking/Serialization (2.4.1)
-  - AFNetworking/UIKit (2.4.1):
+  - AFNetworking/Reachability (2.5.0)
+  - AFNetworking/Security (2.5.0)
+  - AFNetworking/Serialization (2.5.0)
+  - AFNetworking/UIKit (2.5.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - HexColors (2.2.1)
   - PaymentKit (1.1.1)
   - SDWebImage (3.7.1):
     - SDWebImage/Core
   - SDWebImage/Core (3.7.1)
-  - Stripe (2.2.1):
+  - Stripe (2.2.2):
     - Stripe/Core
-  - Stripe/ApplePay (2.2.1):
+  - Stripe/ApplePay (2.2.2):
     - Stripe/Core
-  - Stripe/Core (2.2.1)
+  - Stripe/Core (2.2.2)
   - TPKeyboardAvoiding (1.2.4)
+  - TSMessages (0.9.11):
+    - HexColors
 
 DEPENDENCIES:
   - AFNetworking
+  - HexColors
   - PaymentKit
   - SDWebImage
   - Stripe
   - Stripe/ApplePay
   - TPKeyboardAvoiding
+  - TSMessages
 
 SPEC CHECKSUMS:
-  AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
+  AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
+  HexColors: 01384d2bbe8dc4ffa43c3b4135db6e976952d153
   PaymentKit: f77b4d5cee45947949429c3d587e8eb160a3c9e2
   SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
-  Stripe: 437edda1493d6544e81068d47ae7f54d7a9eabb7
+  Stripe: c9484104b577a9ae0aa275614640b2ee7b9f92f5
   TPKeyboardAvoiding: 925e1e1912597d1a4956697eec3bd9656552153c
+  TSMessages: e21ef5b1c7518cc590a4826c8b05b16b79b10c2c
 
 COCOAPODS: 0.34.4

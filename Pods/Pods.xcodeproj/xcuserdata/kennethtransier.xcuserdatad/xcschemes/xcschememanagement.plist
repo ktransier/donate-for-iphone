@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-StripeTestObjC-HexColors.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-StripeTestObjC-PaymentKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-StripeTestObjC-TSMessages.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-StripeTestObjC.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>081A403B3E49113C999E88A0</key>
+		<key>103BA68F0902FB4D8250215A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>25F8DAFCC5CC8CC1A9CEC501</key>
+		<key>300BE218C19552F5E61B7B79</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5D734D1855548D3ED5F3FFBE</key>
+		<key>5441A068E3191307E42B3BD3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>79DBBF5007598E3F487FB73C</key>
+		<key>5B418C9BE8E6FB1A93665C11</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>967A4FCBDDB822AE38BD2BE3</key>
+		<key>5DB2552E1621961DAE98EB10</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C183226464806953D0FEC3D7</key>
+		<key>98CD8D07C66A42E36A367576</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B9760C873739A5D1D2242103</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F8B8BAA20967B1989A9ED4E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

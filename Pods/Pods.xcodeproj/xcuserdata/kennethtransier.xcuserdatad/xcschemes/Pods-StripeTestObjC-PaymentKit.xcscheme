@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5D734D1855548D3ED5F3FFBE"
+               BlueprintIdentifier = "F8B8BAA20967B1989A9ED4E9"
                BuildableName = "libPods-StripeTestObjC-PaymentKit.a"
                BlueprintName = "Pods-StripeTestObjC-PaymentKit"
                ReferencedContainer = "container:Pods.xcodeproj">
