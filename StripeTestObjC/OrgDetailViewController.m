@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *donateButton;
 @property (weak, nonatomic) IBOutlet UIButton *webButton;
 @property (weak, nonatomic) IBOutlet UITextView *orgContentTextView;
+@property (weak, nonatomic) IBOutlet UITextField *emailField;
 
 @end
 
@@ -38,7 +39,7 @@
     NSString* imageURL = self.org[@"image_url"];
     fullImageUrl = [fullImageUrl stringByAppendingString:imageURL];
     self.orgImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:fullImageUrl]]];
-    self.orgImage.layer.cornerRadius = 100.0;
+    self.orgImage.layer.cornerRadius = 85.0;
     self.orgImage.layer.borderWidth = 1.0;
     self.orgImage.layer.borderColor = [UIColor colorWithRed:0.855 green:0.875 blue:0.882 alpha:1].CGColor;
     self.orgImage.clipsToBounds = true;
@@ -47,6 +48,12 @@
     self.donateButton.layer.borderColor = [[UIColor colorWithRed:0.306 green:0.478 blue:0.682 alpha:1] CGColor];
     self.donateButton.layer.borderWidth=2.0f;
     self.donateButton.layer.cornerRadius=8.0f;
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString* email = [defaults objectForKey:@"email"];
+    
+    self.emailField.text = email;
+    
     
 }
 
@@ -59,6 +66,12 @@
 
 
 - (IBAction)donateButton:(id)sender {
+
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:self.emailField.text forKey:@"email"];
+    
+    [defaults synchronize];
+    
     [self.donationAmount resignFirstResponder];
     PKPaymentRequest *request = [Stripe
                                  paymentRequestWithMerchantIdentifier:@"merchant.fm.kenneth.donate"];

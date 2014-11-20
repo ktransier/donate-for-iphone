@@ -11,16 +11,15 @@
 #import "PTKView.h"
 
 @interface PaymentViewController ()<PTKViewDelegate>
-@property(weak, nonatomic) PTKView *paymentView;
 @property (weak, nonatomic) IBOutlet UIButton *confirmDonationButton;
+@property (weak, nonatomic) IBOutlet PTKView *paymentView;
 @end
 
 @implementation PaymentViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    PTKView *view = [[PTKView alloc] initWithFrame:CGRectMake(42.5,70,290,55)];
-    self.paymentView = view;
+    self.paymentView = self.paymentView;
     self.paymentView.delegate = self;
     [self.view addSubview:self.paymentView];
     self.confirmDonationButton.layer.borderWidth=2.0f;
@@ -47,6 +46,9 @@
 
 
 - (IBAction)confirmDonationButton:(id)sender {
+    self.confirmDonationButton.enabled = FALSE;
+    self.confirmDonationButton.layer.borderColor = [[UIColor colorWithRed:0.91 green:0.91 blue:0.91 alpha:1] CGColor];
+    [self.confirmDonationButton setTitleColor:[UIColor colorWithRed:0.91 green:0.91 blue:0.91 alpha:1] forState:UIControlStateNormal];
     STPCard *card = [[STPCard alloc] init];
     card.number = self.paymentView.card.number;
     card.expMonth = self.paymentView.card.expMonth;

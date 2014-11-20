@@ -17,14 +17,14 @@
                     <color key="textColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="L8w-WA-Gw8">
-                    <rect key="frame" x="26" y="73" width="322" height="303"/>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Together" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNL-Az-gqo">
                     <rect key="frame" x="112" y="355" width="150" height="47"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="38"/>
                     <color key="highlightedColor" red="0.14781975746154785" green="0.14784723520278931" blue="0.14781373739242554" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="L8w-WA-Gw8">
+                    <rect key="frame" x="37" y="75" width="300" height="300"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
