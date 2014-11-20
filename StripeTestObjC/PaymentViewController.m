@@ -9,6 +9,7 @@
 #import "PaymentViewController.h"
 #import "Stripe.h"
 #import "PTKView.h"
+#import "TSMessage.h"
 
 @interface PaymentViewController ()<PTKViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *confirmDonationButton;
@@ -80,13 +81,26 @@
                                                NSData *data,
                                                NSError *error) {
                                if (error) {
-                                   NSLog(@"Error message: %@", error);
-
+                                   
                                } else {
-                                  NSLog(@"Error message: %@", response);
-                                  [self.view endEditing:YES];
-                                  [self dismissViewControllerAnimated:YES completion:nil];
-                               }
+                                   NSDictionary * parsedData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+                                   NSString* message = parsedData[@"message"];
+                                   if ([message isEqual:@"Your card was charged successfully."]) {
+                                       [TSMessage showNotificationWithTitle:@"Success!"
+                                                                   subtitle:@"Thank you for your donation!"
+                                                                   type:TSMessageNotificationTypeSuccess];
+                                       [self.view endEditing:YES];
+                                       [self dismissViewControllerAnimated:YES completion:nil];
+                                   } else {
+                                      [TSMessage showNotificationInViewController:self
+                                                                  title:@"Card Error!"
+                                                                  subtitle:message
+                                                                  type:TSMessageNotificationTypeError];
+                                       self.confirmDonationButton.layer.borderColor = [[UIColor colorWithRed:0.306 green:0.478 blue:0.682 alpha:1] CGColor];
+                                       [self.confirmDonationButton setTitleColor:[UIColor colorWithRed:0.306 green:0.478 blue:0.682 alpha:1] forState:UIControlStateNormal];
+
+                                   };
+                                };
                            }];
 }
 

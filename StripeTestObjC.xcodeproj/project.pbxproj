@@ -16,13 +16,13 @@
 		E78274831A1068C7002BDF58 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E78274821A1068C7002BDF58 /* Images.xcassets */; };
 		E78274861A1068C7002BDF58 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78274841A1068C7002BDF58 /* LaunchScreen.xib */; };
 		E78274921A1068C7002BDF58 /* StripeTestObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E78274911A1068C7002BDF58 /* StripeTestObjCTests.m */; };
-		E789D5DF1A19B9D500B0801C /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E789D5DE1A19B9D500B0801C /* app-icon.png */; };
-		E789D5E11A19BC5900B0801C /* app-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E789D5E01A19BC5900B0801C /* app-logo.png */; };
 		E7A7248D1A1D65760023E59C /* send.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A7248C1A1D65760023E59C /* send.png */; };
 		E7A7248F1A1D660B0023E59C /* dollar-sign.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A7248E1A1D660B0023E59C /* dollar-sign.png */; };
 		E7A724951A1D6BD20023E59C /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A724921A1D6BD20023E59C /* settings@2x.png */; };
 		E7A724961A1D6BD20023E59C /* settings@x1.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A724931A1D6BD20023E59C /* settings@x1.png */; };
 		E7A724971A1D6BD20023E59C /* settings@x3.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A724941A1D6BD20023E59C /* settings@x3.png */; };
+		E7A7249B1A1E83470023E59C /* app-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A7249A1A1E83470023E59C /* app-logo.png */; };
+		E7A7249D1A1E83990023E59C /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A7249C1A1E83990023E59C /* app-icon.png */; };
 		E7DB66481A11937400EBF97F /* OrgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DB66471A11937400EBF97F /* OrgCell.m */; };
 		E7DB664B1A11B51000EBF97F /* ushahidi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7DB664A1A11B51000EBF97F /* ushahidi.jpg */; };
 		E7DB664D1A11B51A00EBF97F /* hrw.png in Resources */ = {isa = PBXBuildFile; fileRef = E7DB664C1A11B51A00EBF97F /* hrw.png */; };
@@ -73,13 +73,13 @@
 		E78274901A1068C7002BDF58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E78274911A1068C7002BDF58 /* StripeTestObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StripeTestObjCTests.m; sourceTree = "<group>"; };
 		E782749B1A106965002BDF58 /* StripeTestObjC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = StripeTestObjC.entitlements; sourceTree = "<group>"; };
-		E789D5DE1A19B9D500B0801C /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
-		E789D5E01A19BC5900B0801C /* app-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-logo.png"; sourceTree = "<group>"; };
 		E7A7248C1A1D65760023E59C /* send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = send.png; sourceTree = "<group>"; };
 		E7A7248E1A1D660B0023E59C /* dollar-sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dollar-sign.png"; sourceTree = "<group>"; };
 		E7A724921A1D6BD20023E59C /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
 		E7A724931A1D6BD20023E59C /* settings@x1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@x1.png"; sourceTree = "<group>"; };
 		E7A724941A1D6BD20023E59C /* settings@x3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@x3.png"; sourceTree = "<group>"; };
+		E7A7249A1A1E83470023E59C /* app-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-logo.png"; sourceTree = "<group>"; };
+		E7A7249C1A1E83990023E59C /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
 		E7DB66461A11937400EBF97F /* OrgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrgCell.h; sourceTree = "<group>"; };
 		E7DB66471A11937400EBF97F /* OrgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrgCell.m; sourceTree = "<group>"; };
 		E7DB664A1A11B51000EBF97F /* ushahidi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ushahidi.jpg; sourceTree = "<group>"; };
@@ -178,13 +178,13 @@
 		E78274751A1068C7002BDF58 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E7A7249C1A1E83990023E59C /* app-icon.png */,
+				E7A7249A1A1E83470023E59C /* app-logo.png */,
 				E7A724921A1D6BD20023E59C /* settings@2x.png */,
 				E7A724931A1D6BD20023E59C /* settings@x1.png */,
 				E7A724941A1D6BD20023E59C /* settings@x3.png */,
 				E7A7248E1A1D660B0023E59C /* dollar-sign.png */,
 				E7A7248C1A1D65760023E59C /* send.png */,
-				E789D5E01A19BC5900B0801C /* app-logo.png */,
-				E789D5DE1A19B9D500B0801C /* app-icon.png */,
 				E7DB66491A11B4DB00EBF97F /* Organizations */,
 				E78274761A1068C7002BDF58 /* Info.plist */,
 				E78274771A1068C7002BDF58 /* main.m */,
@@ -339,10 +339,10 @@
 				E7DB66531A11B57000EBF97F /* girlswhocode.png in Resources */,
 				E7DB665E1A11C4D800EBF97F /* malala.jpg in Resources */,
 				E78274811A1068C7002BDF58 /* Main.storyboard in Resources */,
+				E7A7249D1A1E83990023E59C /* app-icon.png in Resources */,
 				E7DB66701A11D44300EBF97F /* americanredcross.jpg in Resources */,
-				E789D5DF1A19B9D500B0801C /* app-icon.png in Resources */,
 				E78274861A1068C7002BDF58 /* LaunchScreen.xib in Resources */,
-				E789D5E11A19BC5900B0801C /* app-logo.png in Resources */,
+				E7A7249B1A1E83470023E59C /* app-logo.png in Resources */,
 				E7A7248F1A1D660B0023E59C /* dollar-sign.png in Resources */,
 				E7DB664F1A11B53B00EBF97F /* charitywater.jpg in Resources */,
 				E7DB66601A11C5F300EBF97F /* wwp.jpg in Resources */,

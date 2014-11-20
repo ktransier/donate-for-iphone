@@ -11,6 +11,7 @@
 #import "Stripe.h"
 #import "Stripe+ApplePay.h"
 #import <QuartzCore/QuartzCore.h>
+#import "TSMessage.h"
 
 @interface OrgDetailViewController () <PKPaymentAuthorizationViewControllerDelegate, UITextFieldDelegate>
 
@@ -80,16 +81,16 @@
     NSDecimalNumber *amount = [NSDecimalNumber decimalNumberWithString:self.donationAmount.text];
     request.paymentSummaryItems = @[[PKPaymentSummaryItem summaryItemWithLabel:label amount:amount]];
     
-//    if ([Stripe canSubmitPaymentRequest:request]) {
-//        
-//        PKPaymentAuthorizationViewController *paymentController;
-//        paymentController = [[PKPaymentAuthorizationViewController alloc]
-//                             initWithPaymentRequest:request];
-//        [self presentViewController:paymentController animated:YES completion:nil];
-//        paymentController.delegate = self;
-//    } else {
+    if ([Stripe canSubmitPaymentRequest:request]) {
+        
+        PKPaymentAuthorizationViewController *paymentController;
+        paymentController = [[PKPaymentAuthorizationViewController alloc]
+                             initWithPaymentRequest:request];
+        [self presentViewController:paymentController animated:YES completion:nil];
+        paymentController.delegate = self;
+    } else {
         [self performSegueWithIdentifier: @"showStripeForm" sender: self];
-//    }
+    }
 
 }
 
@@ -158,7 +159,21 @@
                                if (error) {
                                    completion(PKPaymentAuthorizationStatusFailure);
                                } else {
-                                   completion(PKPaymentAuthorizationStatusSuccess);
+                                   NSDictionary * parsedData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+                                   NSString* message = parsedData[@"message"];
+                                   if ([message isEqual:@"Your card was charged successfully."]) {
+                                       [TSMessage showNotificationWithTitle:@"Success!"
+                                                                   subtitle:@"Thank you for your donation!"
+                                                                       type:TSMessageNotificationTypeSuccess];
+                                       completion(PKPaymentAuthorizationStatusSuccess);
+                                   } else {
+                                       [TSMessage showNotificationInViewController:self
+                                                                             title:@"Card Error!"
+                                                                          subtitle:message
+                                                                              type:TSMessageNotificationTypeError];
+                                        completion(PKPaymentAuthorizationStatusFailure);
+                                       
+                                   };
                                }
                            }];
 }
