@@ -39,6 +39,8 @@ NSArray *orgArray;
                             action:@selector(makeOrganizationsRequest)
                   forControlEvents:UIControlEventValueChanged];
     
+    self.tableView.separatorColor = [UIColor colorWithRed:0.91 green:0.91 blue:0.91 alpha:1];
+    
 
 }
 
@@ -103,9 +105,9 @@ NSArray *orgArray;
                   placeholderImage:[UIImage imageNamed:@"app-icon.png"]];
     
     
-    cell.image.layer.cornerRadius = 25.0;
+    cell.image.layer.cornerRadius = 17.5;
     cell.image.layer.borderWidth = 1.0;
-    cell.image.layer.borderColor = [UIColor colorWithRed:0.855 green:0.875 blue:0.882 alpha:1].CGColor;
+    cell.image.layer.borderColor = [UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1].CGColor;
     cell.image.clipsToBounds = true;
     return cell;
 }

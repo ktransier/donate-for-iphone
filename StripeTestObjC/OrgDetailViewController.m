@@ -46,9 +46,9 @@
     self.orgImage.clipsToBounds = true;
 //    
 //    self.donateButton.backgroundColor = [UIColor colorWithRed:0.306 green:0.478 blue:0.682 alpha:1];
-    self.donateButton.layer.borderColor = [[UIColor colorWithRed:0.306 green:0.478 blue:0.682 alpha:1] CGColor];
-    self.donateButton.layer.borderWidth=2.0f;
-    self.donateButton.layer.cornerRadius=8.0f;
+//    self.donateButton.layer.borderColor = [[UIColor colorWithRed:0.306 green:0.478 blue:0.682 alpha:1] CGColor];
+//    self.donateButton.layer.borderWidth=2.0f;
+//    self.donateButton.layer.cornerRadius=8.0f;
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString* email = [defaults objectForKey:@"email"];
