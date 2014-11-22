@@ -17,20 +17,33 @@
                     <color key="textColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Together" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNL-Az-gqo">
-                    <rect key="frame" x="112" y="355" width="150" height="47"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="KLX-ai-u5f">
+                    <rect key="frame" x="83" y="122" width="209" height="205"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="209" id="0lc-ps-4jt"/>
+                        <constraint firstAttribute="height" constant="205" id="iEi-9C-5NG"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Together" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNL-Az-gqo">
+                    <rect key="frame" x="19" y="335" width="336" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="47" id="Ejj-ly-INb"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="38"/>
                     <color key="highlightedColor" red="0.14781975746154785" green="0.14784723520278931" blue="0.14781373739242554" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="KLX-ai-u5f">
-                    <rect key="frame" x="76" y="123" width="209" height="205"/>
-                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="bottom" multiplier="1/3" constant="1" id="5cJ-9S-tgC"/>
+                <constraint firstItem="DNL-Az-gqo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="19" id="5rF-vG-Nye"/>
+                <constraint firstItem="KLX-ai-u5f" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="122" id="E43-8k-HCu"/>
+                <constraint firstItem="DNL-Az-gqo" firstAttribute="top" secondItem="KLX-ai-u5f" secondAttribute="bottom" constant="8" id="Fsu-dl-5xi"/>
                 <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="Koa-jz-hwk"/>
+                <constraint firstAttribute="trailing" secondItem="DNL-Az-gqo" secondAttribute="trailing" constant="20" id="PRq-op-eIU"/>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="fvb-Df-36g"/>
+                <constraint firstAttribute="trailing" secondItem="KLX-ai-u5f" secondAttribute="trailing" constant="83" id="qRN-Nd-XMX"/>
+                <constraint firstItem="KLX-ai-u5f" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="83" id="s7i-e9-Gzm"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
