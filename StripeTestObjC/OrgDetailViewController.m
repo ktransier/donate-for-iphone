@@ -31,6 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.donationAmount.delegate = self;
+    self.emailField.delegate = self;
     // Do any additional setup after loading the view.
     
     self.orgNameLabel.text = self.org[@"name"];
@@ -55,42 +56,60 @@
     NSString* email = [defaults objectForKey:@"email"];
     
     self.emailField.text = email;
-    
+
     
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range     replacementString:(NSString *)string
 {
-    if (textField.text.length >= 4 && range.length == 0)
+    if (textField.text.length >= 4 && range.length == 0 && textField == self.donationAmount)
         return NO;
     return YES;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    NSInteger amount = [textField.text integerValue];
+    if (amount < 1 && textField == self.donationAmount) {
+        self.donateButton.enabled = false;
+        NSLog(@"Boom");
+    } else {
+        self.donateButton.enabled = true;
+    }
 }
 
 
 - (IBAction)donateButton:(id)sender {
 
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:self.emailField.text forKey:@"email"];
     
-    [defaults synchronize];
-    
-    [self.donationAmount resignFirstResponder];
-    PKPaymentRequest *request = [Stripe
-                                 paymentRequestWithMerchantIdentifier:@"merchant.fm.kenneth.donate"];
-    // Configure your request here.
-    NSString *label = self.org[@"name"];
-    NSDecimalNumber *amount = [NSDecimalNumber decimalNumberWithString:self.donationAmount.text];
-    request.paymentSummaryItems = @[[PKPaymentSummaryItem summaryItemWithLabel:label amount:amount]];
-    
-    if ([Stripe canSubmitPaymentRequest:request]) {
+    if ([self.donationAmount.text integerValue] > 0 && [self.donationAmount.text integerValue] < 10000) {
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:self.emailField.text forKey:@"email"];
         
-        PKPaymentAuthorizationViewController *paymentController;
-        paymentController = [[PKPaymentAuthorizationViewController alloc]
-                             initWithPaymentRequest:request];
-        [self presentViewController:paymentController animated:YES completion:nil];
-        paymentController.delegate = self;
+        [defaults synchronize];
+        
+        [self.donationAmount resignFirstResponder];
+        PKPaymentRequest *request = [Stripe
+                                     paymentRequestWithMerchantIdentifier:@"merchant.fm.kenneth.donate"];
+        // Configure your request here.
+        NSString *label = self.org[@"name"];
+        NSDecimalNumber *amount = [NSDecimalNumber decimalNumberWithString:self.donationAmount.text];
+        request.paymentSummaryItems = @[[PKPaymentSummaryItem summaryItemWithLabel:label amount:amount]];
+        
+        if ([Stripe canSubmitPaymentRequest:request]) {
+            
+            PKPaymentAuthorizationViewController *paymentController;
+            paymentController = [[PKPaymentAuthorizationViewController alloc]
+                                 initWithPaymentRequest:request];
+            [self presentViewController:paymentController animated:YES completion:nil];
+            paymentController.delegate = self;
+        } else {
+            [self performSegueWithIdentifier: @"showStripeForm" sender: self];
+        }
     } else {
-        [self performSegueWithIdentifier: @"showStripeForm" sender: self];
+        [TSMessage showNotificationWithTitle:@"Warning!"
+                                    subtitle:@"Please enter a value greater than 0!"
+                                        type:TSMessageNotificationTypeWarning];
+        
     }
 
 }

@@ -12,6 +12,7 @@
 #import "Organization.h"
 #import "AFNetworking.h"
 #import "UIImageView+WebCache.h"
+#import "TSMessage.h"
 
 
 @interface OrganizationsTableViewController ()
@@ -83,6 +84,9 @@ NSArray *orgArray;
         [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Request Failed: %@, %@", error, error.userInfo);
+        [TSMessage showNotificationWithTitle:@"Warning!"
+                                    subtitle:@"Network down!"
+                                        type:TSMessageNotificationTypeWarning];
     }];
     [operation start];
     [self reloadData];
