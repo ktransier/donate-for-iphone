@@ -23,9 +23,6 @@
     self.paymentView = self.paymentView;
     self.paymentView.delegate = self;
     [self.view addSubview:self.paymentView];
-    self.confirmDonationButton.layer.borderWidth=2.0f;
-    self.confirmDonationButton.layer.cornerRadius=8.0f;
-    self.confirmDonationButton.layer.borderColor = [[UIColor colorWithRed:0.91 green:0.91 blue:0.91 alpha:1] CGColor];
     [self.confirmDonationButton setTitleColor:[UIColor colorWithRed:0.91 green:0.91 blue:0.91 alpha:1] forState:UIControlStateNormal];
 }
 
@@ -72,7 +69,7 @@
     NSURL *url = [NSURL URLWithString:@"https://togetherapp.org/donations/token"];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     request.HTTPMethod = @"POST";
-    NSString *body     = [NSString stringWithFormat:@"stripe_token=%@&organization=%@&email=%@&amount=%@", token.tokenId, @"HRW", email, @"25"];
+    NSString *body     = [NSString stringWithFormat:@"stripe_token=%@&organization=%@&email=%@&amount=%@", token.tokenId, self.org[@"name"], email, self.donationAmount];
     request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];
     
     [NSURLConnection sendAsynchronousRequest:request

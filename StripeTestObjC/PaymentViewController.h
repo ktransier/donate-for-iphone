@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface PaymentViewController : UIViewController
-
+   @property(nonatomic, strong) NSDictionary* org;
+   @property(nonatomic, strong) NSString* donationAmount;
 @end

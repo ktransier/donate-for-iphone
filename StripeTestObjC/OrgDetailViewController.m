@@ -7,10 +7,11 @@
 //
 
 #import "OrgDetailViewController.h"
+#import "PaymentViewController.h"
 #import "WebViewController.h"
 #import "Stripe.h"
 #import "Stripe+ApplePay.h"
-#import <QuartzCore/QuartzCore.h>
+#import "QuartzCore/QuartzCore.h"
 #import "TSMessage.h"
 
 @interface OrgDetailViewController () <PKPaymentAuthorizationViewControllerDelegate, UITextFieldDelegate>
@@ -40,7 +41,7 @@
     NSString* imageURL = self.org[@"image_url"];
     fullImageUrl = [fullImageUrl stringByAppendingString:imageURL];
     self.orgImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:fullImageUrl]]];
-    self.orgImage.layer.cornerRadius = 85.0;
+    self.orgImage.layer.cornerRadius = 72.5;
     self.orgImage.layer.borderWidth = 1.0;
     self.orgImage.layer.borderColor = [UIColor colorWithRed:0.855 green:0.875 blue:0.882 alpha:1].CGColor;
     self.orgImage.clipsToBounds = true;
@@ -190,6 +191,13 @@
         WebViewController* destinationViewController = segue.destinationViewController;
         destinationViewController.url = self.org[@"url"];
     }
+
+    if ([segue.identifier isEqual:@"showStripeForm"]) {
+        PaymentViewController* destinationViewController = segue.destinationViewController;
+        destinationViewController.org = self.org;
+        destinationViewController.donationAmount = self.donationAmount.text;
+    }
+    
 }
 
 @end
