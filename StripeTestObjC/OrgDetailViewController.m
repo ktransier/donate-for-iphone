@@ -57,6 +57,7 @@
     
     self.emailField.text = email;
 
+
     
 }
 
@@ -77,11 +78,24 @@
     }
 }
 
+-(BOOL) NSStringIsValidEmail:(NSString *)checkString
+{
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", @".+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*"];
+    return [emailTest evaluateWithObject:checkString];
+}
+
 
 - (IBAction)donateButton:(id)sender {
+    if (![self.donationAmount.text integerValue] > 0 && [self.donationAmount.text integerValue] < 10000) {
+        [TSMessage showNotificationWithTitle:@"Warning!"
+                                    subtitle:@"Please enter a value greater than 0!"
+                                        type:TSMessageNotificationTypeWarning];
+    } else if (![self NSStringIsValidEmail:self.emailField.text]) {
+        [TSMessage showNotificationWithTitle:@"Warning!"
+                                    subtitle:@"Please enter a valid email!"
+                                        type:TSMessageNotificationTypeWarning];
+    } else {
 
-    
-    if ([self.donationAmount.text integerValue] > 0 && [self.donationAmount.text integerValue] < 10000) {
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         [defaults setObject:self.emailField.text forKey:@"email"];
         
@@ -105,10 +119,7 @@
         } else {
             [self performSegueWithIdentifier: @"showStripeForm" sender: self];
         }
-    } else {
-        [TSMessage showNotificationWithTitle:@"Warning!"
-                                    subtitle:@"Please enter a value greater than 0!"
-                                        type:TSMessageNotificationTypeWarning];
+
         
     }
 
@@ -168,7 +179,7 @@
     NSURL *url = [NSURL URLWithString:@"https://togetherapp.org/donations/token"];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     request.HTTPMethod = @"POST";
-    NSString *body     = [NSString stringWithFormat:@"stripe_token=%@&organization=%@&email=%@&amount=%@", token.tokenId, self.org[@"name"], email, self.donationAmount.text];
+    NSString *body     = [NSString stringWithFormat:@"stripe_token=%@&organization_name=%@&email=%@&amount=%@&organization_id=%@", token.tokenId, self.org[@"name"], email, self.donationAmount.text, self.org[@"id"]];
     request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];
     
     [NSURLConnection sendAsynchronousRequest:request
@@ -216,6 +227,7 @@
         destinationViewController.org = self.org;
         destinationViewController.donationAmount = self.donationAmount.text;
     }
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     
 }
 

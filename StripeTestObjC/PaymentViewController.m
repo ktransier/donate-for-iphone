@@ -69,46 +69,35 @@
     NSURL *url = [NSURL URLWithString:@"https://togetherapp.org/donations/token"];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     request.HTTPMethod = @"POST";
-    NSString *body     = [NSString stringWithFormat:@"stripe_token=%@&organization=%@&email=%@&amount=%@", token.tokenId, self.org[@"name"], email, self.donationAmount];
+    NSString *body     = [NSString stringWithFormat:@"stripe_token=%@&organization_name=%@&email=%@&amount=%@&organization_id=%@", token.tokenId, self.org[@"name"], email, self.donationAmount, self.org[@"id"]];
     request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];
     
     [NSURLConnection sendAsynchronousRequest:request
-                                       queue:[NSOperationQueue mainQueue]
-                           completionHandler:^(NSURLResponse *response,
-                                               NSData *data,
-                                               NSError *error) {
-                               if (error) {
-                                   
-                               } else {
-                                   NSDictionary * parsedData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-                                   NSString* message = parsedData[@"message"];
-                                   if ([message isEqual:@"Your card was charged successfully."]) {
-                                       [TSMessage showNotificationWithTitle:@"Success!"
-                                                                   subtitle:@"Thank you for your donation!"
-                                                                   type:TSMessageNotificationTypeSuccess];
-                                       [self.view endEditing:YES];
-                                       [self dismissViewControllerAnimated:YES completion:nil];
-                                   } else {
-                                      [TSMessage showNotificationInViewController:self
-                                                                  title:@"Card Error!"
-                                                                  subtitle:message
-                                                                  type:TSMessageNotificationTypeError];
-                                       self.confirmDonationButton.layer.borderColor = [[UIColor colorWithRed:0.306 green:0.478 blue:0.682 alpha:1] CGColor];
-                                       [self.confirmDonationButton setTitleColor:[UIColor colorWithRed:0.306 green:0.478 blue:0.682 alpha:1] forState:UIControlStateNormal];
+                   queue:[NSOperationQueue mainQueue]
+       completionHandler:^(NSURLResponse *response,
+                           NSData *data,
+                           NSError *error) {
+           if (error) {
+               
+           } else {
+               NSDictionary * parsedData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+               NSString* message = parsedData[@"message"];
+               if ([message isEqual:@"Your card was charged successfully."]) {
+                   [TSMessage showNotificationWithTitle:@"Success!"
+                                               subtitle:@"Thank you for your donation!"
+                                               type:TSMessageNotificationTypeSuccess];
+                   [self.view endEditing:YES];
+                   [self dismissViewControllerAnimated:YES completion:nil];
+               } else {
+                  [TSMessage showNotificationInViewController:self
+                                              title:@"Card Error!"
+                                              subtitle:message
+                                              type:TSMessageNotificationTypeError];
+                   self.confirmDonationButton.layer.borderColor = [[UIColor colorWithRed:0.306 green:0.478 blue:0.682 alpha:1] CGColor];
+                   [self.confirmDonationButton setTitleColor:[UIColor colorWithRed:0.306 green:0.478 blue:0.682 alpha:1] forState:UIControlStateNormal];
 
-                                   };
-                                };
-                           }];
+               };
+            };
+       }];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
