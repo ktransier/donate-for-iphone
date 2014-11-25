@@ -472,7 +472,7 @@
                                                     </mask>
                                                 </variation>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="c0K-2u-5bu">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Description" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="c0K-2u-5bu">
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -524,7 +524,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="LCE-PV-7xy"/>
                                                 </constraints>
-                                                <state key="normal" title="Explore">
+                                                <state key="normal" title="URL">
                                                     <color key="titleColor" red="0.33242201805114746" green="0.48836302757263184" blue="0.67357546091079712" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
