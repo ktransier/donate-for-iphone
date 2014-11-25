@@ -33,14 +33,14 @@ NSArray *orgArray;
     [self makeOrganizationsRequest];
     
     
-//    self.refreshControl = [[UIRefreshControl alloc] init];
-//    self.refreshControl.backgroundColor = [UIColor colorWithRed:0.937 green:0.282 blue:0.282 alpha:1];
-//    self.refreshControl.tintColor = [UIColor whiteColor];
-//    [self.refreshControl addTarget:self
-//                            action:@selector(makeOrganizationsRequest)
-//                  forControlEvents:UIControlEventValueChanged];
-//    
-//    self.tableView.separatorColor = [UIColor colorWithRed:0.91 green:0.91 blue:0.91 alpha:1];
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.backgroundColor = [UIColor whiteColor];
+    self.refreshControl.tintColor = [UIColor blackColor];
+    [self.refreshControl addTarget:self
+                            action:@selector(makeOrganizationsRequest)
+                  forControlEvents:UIControlEventValueChanged];
+    
+    self.tableView.separatorColor = [UIColor colorWithRed:0.91 green:0.91 blue:0.91 alpha:1];
     
 
 }
