@@ -1,3 +1,18 @@
-Network connection was lost error handling
-Static Tableview for settings
-SSL/Cloudflare
+- Promo Website
+- Code refactoring and commenting
+- About screen
+    - Contact
+    - Credits
+        - Flaticons
+- 100 nonprofits
+- Set up legal structure
+- Set up bank account
+- Change passwords and API tokens
+- Set up test flight
+- Write description
+- Resize donation screen on iphone 5 and 4
+- Restyle notifications
+- Blogpost
+- Contact charities
+- Style email
+- Change statement descriptor in Stripe
