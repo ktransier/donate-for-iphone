@@ -1,6 +1,6 @@
 //
 //  OrgCell.m
-//  StripeTestObjC
+//  Together
 //
 //  Created by Kenneth Transier on 11/10/14.
 //  Copyright (c) 2014 Kenneth Transier. All rights reserved.
@@ -10,11 +10,11 @@
 
 @implementation OrgCell
 
-- (void)awakeFromNib {
-}
+    - (void)awakeFromNib {
+    }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-}
+    - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+        [super setSelected:selected animated:animated];
+    }
 
 @end
