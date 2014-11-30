@@ -1,10 +1,11 @@
+
 - Promo Website
 - Code refactoring and commenting
 - About screen
     - Contact
     - Credits
         - Flaticons
-- 100 nonprofits
+- 50 nonprofits
 - Set up legal structure
 - Set up bank account
 - Change passwords and API tokens
@@ -16,3 +17,8 @@
 - Contact charities
 - Style email
 - Change statement descriptor in Stripe
+
+
+Tax Deductability
+http://support.indiegogo.com/hc/en-us/articles/202444736-How-To-Raise-Tax-Deductible-Funds
+https://www.redditdonate.com/faq/npo
