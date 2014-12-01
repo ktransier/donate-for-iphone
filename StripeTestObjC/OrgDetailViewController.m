@@ -130,23 +130,20 @@
         request.paymentSummaryItems = @[[PKPaymentSummaryItem summaryItemWithLabel:label amount:amount]];
         
         // Determine if device ApplePay capable
-        if ([Stripe canSubmitPaymentRequest:request]) {
-            
-            // Toggle ApplePay view controller
-            PKPaymentAuthorizationViewController *paymentController;
-            paymentController = [[PKPaymentAuthorizationViewController alloc]
-                                 initWithPaymentRequest:request];
-            [self presentViewController:paymentController animated:YES completion:nil];
-            paymentController.delegate = self;
-        
-        // Else trigger segue to manual credit card entry
-        } else {
+//        if ([Stripe canSubmitPaymentRequest:request]) {
+//            
+//            // Toggle ApplePay view controller
+//            PKPaymentAuthorizationViewController *paymentController;
+//            paymentController = [[PKPaymentAuthorizationViewController alloc]
+//                                 initWithPaymentRequest:request];
+//            [self presentViewController:paymentController animated:YES completion:nil];
+//            paymentController.delegate = self;
+//        
+//        // Else trigger segue to manual credit card entry
+//        } else {
             [self performSegueWithIdentifier: @"showStripeForm" sender: self];
-        }
-
-        
+//        }
     }
-
 }
 
 // Send to payment handler

@@ -12,92 +12,111 @@
 #import "TSMessage.h"
 
 @interface PaymentViewController ()<PTKViewDelegate>
+
     @property (weak, nonatomic) IBOutlet UIButton *confirmDonationButton;
     @property (weak, nonatomic) IBOutlet PTKView *paymentView;
+
 @end
 
 @implementation PaymentViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.paymentView = self.paymentView;
-    self.paymentView.delegate = self;
-    [self.view addSubview:self.paymentView];
-    [self.confirmDonationButton setTitleColor:[UIColor colorWithRed:0.91 green:0.91 blue:0.91 alpha:1] forState:UIControlStateNormal];
-}
+    - (void)viewDidLoad {
+        [super viewDidLoad];
+        
+        // Set payment view delegate
+        self.paymentView.delegate = self;
+        [self.view addSubview:self.paymentView];
+        
+        // Set confirm donation button title color
+        [self.confirmDonationButton setTitleColor:[UIColor colorWithRed:0.91 green:0.91 blue:0.91 alpha:1] forState:UIControlStateNormal];
+    }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-- (IBAction)closeButton:(id)sender {
-  [self dismissViewControllerAnimated:YES completion:nil];
-}
+    - (void)didReceiveMemoryWarning {
+        [super didReceiveMemoryWarning];
+    }
+    - (IBAction)closeButton:(id)sender {
+        
+      // Dismiss payment controller
+      [self dismissViewControllerAnimated:YES completion:nil];
+    }
 
-- (void)paymentView:(PTKView *)view withCard:(PTKCard *)card isValid:(BOOL)valid
-{
-    // Toggle navigation, for example
-    self.confirmDonationButton.enabled = valid;
-    self.confirmDonationButton.layer.borderColor = [[UIColor colorWithRed:0.306 green:0.478 blue:0.682 alpha:1] CGColor];
-    [self.confirmDonationButton setTitleColor:[UIColor colorWithRed:0.306 green:0.478 blue:0.682 alpha:1] forState:UIControlStateNormal];
-}
-
-
-- (IBAction)confirmDonationButton:(id)sender {
-    self.confirmDonationButton.enabled = FALSE;
-    self.confirmDonationButton.layer.borderColor = [[UIColor colorWithRed:0.91 green:0.91 blue:0.91 alpha:1] CGColor];
-    [self.confirmDonationButton setTitleColor:[UIColor colorWithRed:0.91 green:0.91 blue:0.91 alpha:1] forState:UIControlStateNormal];
-    STPCard *card = [[STPCard alloc] init];
-    card.number = self.paymentView.card.number;
-    card.expMonth = self.paymentView.card.expMonth;
-    card.expYear = self.paymentView.card.expYear;
-    card.cvc = self.paymentView.card.cvc;
-    [Stripe createTokenWithCard:card completion:^(STPToken *token, NSError *error) {
-        if (error) {
-//            [self handleError:error];
+    // If card is valid format, enable confirm button
+    - (void)paymentView:(PTKView *)view withCard:(PTKCard *)card isValid:(BOOL)valid
+    {
+        if (valid) {
+          self.confirmDonationButton.enabled = true;
+          [self.confirmDonationButton setTitleColor:[UIColor colorWithRed:0.306 green:0.478 blue:0.682 alpha:1] forState:UIControlStateNormal];
         } else {
-            [self createBackendChargeWithToken:token];
+          self.confirmDonationButton.enabled = false;
+          [self.confirmDonationButton setTitleColor:[UIColor colorWithRed:0.91 green:0.91 blue:0.91 alpha:1] forState:UIControlStateNormal];
         }
-    }];
-}
+    }
 
-- (void)createBackendChargeWithToken:(STPToken *)token {
-    
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString* email = [defaults objectForKey:@"email"];
-    
-    NSURL *url = [NSURL URLWithString:@"https://togetherapp.org/donations/token"];
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
-    request.HTTPMethod = @"POST";
-    NSString *body     = [NSString stringWithFormat:@"stripe_token=%@&organization_name=%@&email=%@&amount=%@&organization_id=%@", token.tokenId, self.org[@"name"], email, self.donationAmount, self.org[@"id"]];
-    request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];
-    
-    [NSURLConnection sendAsynchronousRequest:request
-                   queue:[NSOperationQueue mainQueue]
-       completionHandler:^(NSURLResponse *response,
-                           NSData *data,
-                           NSError *error) {
-           if (error) {
-               
-           } else {
-               NSDictionary * parsedData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-               NSString* message = parsedData[@"message"];
-               if ([message isEqual:@"Your card was charged successfully."]) {
-                   [TSMessage showNotificationWithTitle:@"Success!"
-                                               subtitle:@"Thank you for your donation!"
-                                               type:TSMessageNotificationTypeSuccess];
-                   [self.view endEditing:YES];
-                   [self dismissViewControllerAnimated:YES completion:nil];
+
+    - (IBAction)confirmDonationButton:(id)sender {
+        
+        // Prevent multiple donations
+        self.confirmDonationButton.enabled = false;
+        [self.confirmDonationButton setTitleColor:[UIColor colorWithRed:0.91 green:0.91 blue:0.91 alpha:1] forState:UIControlStateNormal];
+        
+        // Create Stripe card object
+        STPCard *card = [[STPCard alloc] init];
+        card.number = self.paymentView.card.number;
+        card.expMonth = self.paymentView.card.expMonth;
+        card.expYear = self.paymentView.card.expYear;
+        card.cvc = self.paymentView.card.cvc;
+        
+        // Create Stripe token
+        [Stripe createTokenWithCard:card completion:^(STPToken *token, NSError *error) {
+            if (error) {
+              // Handle error from Stripe
+            } else {
+                [self createBackendChargeWithToken:token];
+            }
+        }];
+    }
+
+    - (void)createBackendChargeWithToken:(STPToken *)token {
+        
+        // Set user email default
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSString* email = [defaults objectForKey:@"email"];
+        
+        // Set URL
+        NSURL *url = [NSURL URLWithString:@"https://togetherapp.org/donations/token"];
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+        request.HTTPMethod = @"POST";
+        NSString *body     = [NSString stringWithFormat:@"stripe_token=%@&organization_name=%@&email=%@&amount=%@&organization_id=%@", token.tokenId, self.org[@"name"], email, self.donationAmount, self.org[@"id"]];
+        request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];
+        
+        // Send request
+        [NSURLConnection sendAsynchronousRequest:request
+                       queue:[NSOperationQueue mainQueue]
+           completionHandler:^(NSURLResponse *response,
+                               NSData *data,
+                               NSError *error) {
+               if (error) {
+                   
                } else {
-                  [TSMessage showNotificationInViewController:self
-                                              title:@"Card Error!"
-                                              subtitle:message
-                                              type:TSMessageNotificationTypeError];
-                   self.confirmDonationButton.layer.borderColor = [[UIColor colorWithRed:0.306 green:0.478 blue:0.682 alpha:1] CGColor];
-                   [self.confirmDonationButton setTitleColor:[UIColor colorWithRed:0.306 green:0.478 blue:0.682 alpha:1] forState:UIControlStateNormal];
+                   NSDictionary * parsedData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+                   NSString* message = parsedData[@"message"];
+                   if ([message isEqual:@"Your card was charged successfully."]) {
+                       [TSMessage showNotificationWithTitle:@"Success!"
+                                                   subtitle:@"Thank you for your donation!"
+                                                   type:TSMessageNotificationTypeSuccess];
+                       [self.view endEditing:YES];
+                       [self dismissViewControllerAnimated:YES completion:nil];
+                   } else {
+                      // Show error notification and enable donation button
+                      [TSMessage showNotificationInViewController:self
+                                                  title:@"Card Error!"
+                                                  subtitle:message
+                                                  type:TSMessageNotificationTypeError];
 
-               };
-            };
-       }];
-}
+                       [self.confirmDonationButton setTitleColor:[UIColor colorWithRed:0.306 green:0.478 blue:0.682 alpha:1] forState:UIControlStateNormal];
+
+                   };
+                };
+           }];
+    }
 @end
