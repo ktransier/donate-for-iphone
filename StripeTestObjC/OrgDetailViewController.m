@@ -129,20 +129,20 @@
         NSDecimalNumber *amount = [NSDecimalNumber decimalNumberWithString:self.donationAmount.text];
         request.paymentSummaryItems = @[[PKPaymentSummaryItem summaryItemWithLabel:label amount:amount]];
         
-        // Determine if device ApplePay capable
-//        if ([Stripe canSubmitPaymentRequest:request]) {
-//            
-//            // Toggle ApplePay view controller
-//            PKPaymentAuthorizationViewController *paymentController;
-//            paymentController = [[PKPaymentAuthorizationViewController alloc]
-//                                 initWithPaymentRequest:request];
-//            [self presentViewController:paymentController animated:YES completion:nil];
-//            paymentController.delegate = self;
-//        
-//        // Else trigger segue to manual credit card entry
-//        } else {
+         Determine if device ApplePay capable
+        if ([Stripe canSubmitPaymentRequest:request]) {
+            
+            // Toggle ApplePay view controller
+            PKPaymentAuthorizationViewController *paymentController;
+            paymentController = [[PKPaymentAuthorizationViewController alloc]
+                                 initWithPaymentRequest:request];
+            [self presentViewController:paymentController animated:YES completion:nil];
+            paymentController.delegate = self;
+        
+        // Else trigger segue to manual credit card entry
+        } else {
             [self performSegueWithIdentifier: @"showStripeForm" sender: self];
-//        }
+        }
 
         
     }
@@ -231,11 +231,14 @@
     }
 
     if ([segue.identifier isEqual:@"showStripeForm"]) {
-        PaymentViewController* destinationViewController = segue.destinationViewController;
         
-        destinationViewController.donationAmount = self.donationAmount.text;
+        // Go through navigation controller to top level view controller
+        UINavigationController *nav = [segue destinationViewController];
+        PaymentViewController* paymentViewController = (PaymentViewController *)nav.topViewController;
+        paymentViewController.donationAmount = self.donationAmount.text;
+        paymentViewController.org = self.org;
         
-        destinationViewController.org = self.org;
+        
 
     }
     
