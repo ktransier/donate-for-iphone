@@ -1,6 +1,6 @@
 //
 //  WebViewController.h
-//  StripeTestObjC
+//  Together
 //
 //  Created by Kenneth Transier on 11/14/14.
 //  Copyright (c) 2014 Kenneth Transier. All rights reserved.
@@ -10,6 +10,6 @@
 
 @interface WebViewController : UIViewController 
 
-@property (weak, nonatomic) NSString* url;
+    @property (weak, nonatomic) NSString* url;
 
 @end
