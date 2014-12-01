@@ -3,7 +3,7 @@
 
 source 'https://github.com/CocoaPods/Specs.git'
 
-target 'StripeTestObjC' do
+target 'Together' do
     pod 'Stripe'
     pod 'Stripe/ApplePay'
     pod 'PaymentKit'
@@ -14,7 +14,7 @@ target 'StripeTestObjC' do
     pod 'HexColors'
 end
 
-target 'StripeTestObjCTests' do
+target 'TogetherTests' do
 
 end
 

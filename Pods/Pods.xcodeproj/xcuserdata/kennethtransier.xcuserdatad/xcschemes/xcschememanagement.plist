@@ -4,42 +4,42 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-StripeTestObjC-AFNetworking.xcscheme</key>
+		<key>Pods-Together-AFNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-StripeTestObjC-HexColors.xcscheme</key>
+		<key>Pods-Together-HexColors.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-StripeTestObjC-PaymentKit.xcscheme</key>
+		<key>Pods-Together-PaymentKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-StripeTestObjC-SDWebImage.xcscheme</key>
+		<key>Pods-Together-SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-StripeTestObjC-Stripe.xcscheme</key>
+		<key>Pods-Together-Stripe.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-StripeTestObjC-TPKeyboardAvoiding.xcscheme</key>
+		<key>Pods-Together-TPKeyboardAvoiding.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-StripeTestObjC-TSMessages.xcscheme</key>
+		<key>Pods-Together-TSMessages.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-StripeTestObjC.xcscheme</key>
+		<key>Pods-Together.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,42 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>103BA68F0902FB4D8250215A</key>
+		<key>53831D98F7D2757F72A872DE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>300BE218C19552F5E61B7B79</key>
+		<key>57EED76593DAB70FA8A8F69D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5441A068E3191307E42B3BD3</key>
+		<key>589C9F717F1CADCD53B1BF77</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5B418C9BE8E6FB1A93665C11</key>
+		<key>5EB491234F2C942392AEEBA6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5DB2552E1621961DAE98EB10</key>
+		<key>66142380CDD3808B749D024B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>98CD8D07C66A42E36A367576</key>
+		<key>8F28F792B7EA6EB8D3EC27DE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B9760C873739A5D1D2242103</key>
+		<key>BA444C52B04BB4B8B14D0003</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F8B8BAA20967B1989A9ED4E9</key>
+		<key>D2DAE0959C3A63BD4CCA27E0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

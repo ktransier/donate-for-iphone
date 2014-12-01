@@ -1,0 +1,6 @@
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#endif
+
+#import "Pods-Together-environment.h"
+#define STRIPE_ENABLE_APPLEPAY YES
