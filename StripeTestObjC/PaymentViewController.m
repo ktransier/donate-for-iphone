@@ -1,6 +1,6 @@
 //
 //  PaymentViewController.m
-//  StripeTestObjC
+//  Together
 //
 //  Created by Kenneth Transier on 11/13/14.
 //  Copyright (c) 2014 Kenneth Transier. All rights reserved.
@@ -12,8 +12,8 @@
 #import "TSMessage.h"
 
 @interface PaymentViewController ()<PTKViewDelegate>
-@property (weak, nonatomic) IBOutlet UIButton *confirmDonationButton;
-@property (weak, nonatomic) IBOutlet PTKView *paymentView;
+    @property (weak, nonatomic) IBOutlet UIButton *confirmDonationButton;
+    @property (weak, nonatomic) IBOutlet PTKView *paymentView;
 @end
 
 @implementation PaymentViewController
