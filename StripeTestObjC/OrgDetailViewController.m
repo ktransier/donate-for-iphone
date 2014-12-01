@@ -129,7 +129,7 @@
         NSDecimalNumber *amount = [NSDecimalNumber decimalNumberWithString:self.donationAmount.text];
         request.paymentSummaryItems = @[[PKPaymentSummaryItem summaryItemWithLabel:label amount:amount]];
         
-         Determine if device ApplePay capable
+        // Determine if device ApplePay capable
         if ([Stripe canSubmitPaymentRequest:request]) {
             
             // Toggle ApplePay view controller
@@ -238,8 +238,6 @@
         paymentViewController.donationAmount = self.donationAmount.text;
         paymentViewController.org = self.org;
         
-        
-
     }
     
     // Remove back button text
