@@ -79,6 +79,7 @@
 		E7A724941A1D6BD20023E59C /* settings@x3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@x3.png"; sourceTree = "<group>"; };
 		E7A7249A1A1E83470023E59C /* app-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-logo.png"; sourceTree = "<group>"; };
 		E7A7249C1A1E83990023E59C /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
+		E7D497221A2C5298006D9016 /* Together.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Together.entitlements; sourceTree = SOURCE_ROOT; };
 		E7DB66461A11937400EBF97F /* OrgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrgCell.h; sourceTree = "<group>"; };
 		E7DB66471A11937400EBF97F /* OrgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrgCell.m; sourceTree = "<group>"; };
 		E7DB664A1A11B51000EBF97F /* ushahidi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ushahidi.jpg; sourceTree = "<group>"; };
@@ -159,6 +160,7 @@
 		E78274741A1068C7002BDF58 /* Together */ = {
 			isa = PBXGroup;
 			children = (
+				E7D497221A2C5298006D9016 /* Together.entitlements */,
 				E7DB665C1A11B7C100EBF97F /* models */,
 				E78274791A1068C7002BDF58 /* AppDelegate.h */,
 				E782747A1A1068C7002BDF58 /* AppDelegate.m */,
@@ -538,7 +540,7 @@
 			baseConfigurationReference = 0E8611D6D4FE844B912CE208 /* Pods-Together.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = StripeTestObjC/StripeTestObjC.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Together.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -550,6 +552,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Together;
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -558,7 +561,7 @@
 			baseConfigurationReference = DB1317A3166616671AAF4E0A /* Pods-Together.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = StripeTestObjC/StripeTestObjC.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Together.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -570,6 +573,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Together;
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
