@@ -29,18 +29,7 @@
 		E7C636411A2FF99A00EEAABE /* app-title-bar-logo@x2.png in Resources */ = {isa = PBXBuildFile; fileRef = E7C636401A2FF99A00EEAABE /* app-title-bar-logo@x2.png */; };
 		E7C636431A2FFC5C00EEAABE /* app-title-bar-logo@x3.png in Resources */ = {isa = PBXBuildFile; fileRef = E7C636421A2FFC5C00EEAABE /* app-title-bar-logo@x3.png */; };
 		E7DB66481A11937400EBF97F /* OrgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DB66471A11937400EBF97F /* OrgCell.m */; };
-		E7DB664B1A11B51000EBF97F /* ushahidi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7DB664A1A11B51000EBF97F /* ushahidi.jpg */; };
-		E7DB664D1A11B51A00EBF97F /* hrw.png in Resources */ = {isa = PBXBuildFile; fileRef = E7DB664C1A11B51A00EBF97F /* hrw.png */; };
-		E7DB664F1A11B53B00EBF97F /* charitywater.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7DB664E1A11B53B00EBF97F /* charitywater.jpg */; };
-		E7DB66511A11B54B00EBF97F /* msf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7DB66501A11B54B00EBF97F /* msf.jpg */; };
-		E7DB66531A11B57000EBF97F /* girlswhocode.png in Resources */ = {isa = PBXBuildFile; fileRef = E7DB66521A11B57000EBF97F /* girlswhocode.png */; };
 		E7DB665B1A11B7B200EBF97F /* Organization.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DB665A1A11B7B200EBF97F /* Organization.m */; };
-		E7DB665E1A11C4D800EBF97F /* malala.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7DB665D1A11C4D800EBF97F /* malala.jpg */; };
-		E7DB66601A11C5F300EBF97F /* wwp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7DB665F1A11C5F300EBF97F /* wwp.jpg */; };
-		E7DB666C1A11CC9000EBF97F /* habitat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7DB666B1A11CC9000EBF97F /* habitat.jpg */; };
-		E7DB666E1A11D3E900EBF97F /* amnesty.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7DB666D1A11D3E900EBF97F /* amnesty.jpg */; };
-		E7DB66701A11D44300EBF97F /* americanredcross.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7DB666F1A11D44300EBF97F /* americanredcross.jpg */; };
-		E7DB66721A11D49D00EBF97F /* maw.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7DB66711A11D49D00EBF97F /* maw.jpg */; };
 		E7DB66981A15C53A00EBF97F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DB66971A15C53A00EBF97F /* SettingsViewController.m */; };
 		E7DB669B1A15D7A800EBF97F /* PaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DB669A1A15D7A800EBF97F /* PaymentViewController.m */; };
 /* End PBXBuildFile section */
@@ -90,19 +79,8 @@
 		E7D497221A2C5298006D9016 /* Together.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Together.entitlements; sourceTree = SOURCE_ROOT; };
 		E7DB66461A11937400EBF97F /* OrgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrgCell.h; sourceTree = "<group>"; };
 		E7DB66471A11937400EBF97F /* OrgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrgCell.m; sourceTree = "<group>"; };
-		E7DB664A1A11B51000EBF97F /* ushahidi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ushahidi.jpg; sourceTree = "<group>"; };
-		E7DB664C1A11B51A00EBF97F /* hrw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hrw.png; sourceTree = "<group>"; };
-		E7DB664E1A11B53B00EBF97F /* charitywater.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = charitywater.jpg; sourceTree = "<group>"; };
-		E7DB66501A11B54B00EBF97F /* msf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = msf.jpg; sourceTree = "<group>"; };
-		E7DB66521A11B57000EBF97F /* girlswhocode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girlswhocode.png; sourceTree = "<group>"; };
 		E7DB66591A11B7B200EBF97F /* Organization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Organization.h; path = StripeTestObjC/Organization.h; sourceTree = "<group>"; };
 		E7DB665A1A11B7B200EBF97F /* Organization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Organization.m; path = StripeTestObjC/Organization.m; sourceTree = "<group>"; };
-		E7DB665D1A11C4D800EBF97F /* malala.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = malala.jpg; sourceTree = "<group>"; };
-		E7DB665F1A11C5F300EBF97F /* wwp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wwp.jpg; sourceTree = "<group>"; };
-		E7DB666B1A11CC9000EBF97F /* habitat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = habitat.jpg; sourceTree = "<group>"; };
-		E7DB666D1A11D3E900EBF97F /* amnesty.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = amnesty.jpg; sourceTree = "<group>"; };
-		E7DB666F1A11D44300EBF97F /* americanredcross.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = americanredcross.jpg; sourceTree = "<group>"; };
-		E7DB66711A11D49D00EBF97F /* maw.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = maw.jpg; sourceTree = "<group>"; };
 		E7DB66961A15C53A00EBF97F /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		E7DB66971A15C53A00EBF97F /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		E7DB66991A15D7A800EBF97F /* PaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentViewController.h; sourceTree = "<group>"; };
@@ -207,7 +185,6 @@
 				E7A724941A1D6BD20023E59C /* settings@x3.png */,
 				E7A7248E1A1D660B0023E59C /* dollar-sign.png */,
 				E7A7248C1A1D65760023E59C /* send.png */,
-				E7DB66491A11B4DB00EBF97F /* Organizations */,
 				E78274761A1068C7002BDF58 /* Info.plist */,
 				E78274771A1068C7002BDF58 /* main.m */,
 			);
@@ -230,24 +207,6 @@
 				E78274901A1068C7002BDF58 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E7DB66491A11B4DB00EBF97F /* Organizations */ = {
-			isa = PBXGroup;
-			children = (
-				E7DB66711A11D49D00EBF97F /* maw.jpg */,
-				E7DB666F1A11D44300EBF97F /* americanredcross.jpg */,
-				E7DB666D1A11D3E900EBF97F /* amnesty.jpg */,
-				E7DB666B1A11CC9000EBF97F /* habitat.jpg */,
-				E7DB665F1A11C5F300EBF97F /* wwp.jpg */,
-				E7DB665D1A11C4D800EBF97F /* malala.jpg */,
-				E7DB66521A11B57000EBF97F /* girlswhocode.png */,
-				E7DB66501A11B54B00EBF97F /* msf.jpg */,
-				E7DB664E1A11B53B00EBF97F /* charitywater.jpg */,
-				E7DB664C1A11B51A00EBF97F /* hrw.png */,
-				E7DB664A1A11B51000EBF97F /* ushahidi.jpg */,
-			);
-			name = Organizations;
 			sourceTree = "<group>";
 		};
 		E7DB665C1A11B7C100EBF97F /* models */ = {
@@ -349,26 +308,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7A724961A1D6BD20023E59C /* settings@x1.png in Resources */,
-				E7DB666C1A11CC9000EBF97F /* habitat.jpg in Resources */,
-				E7DB66531A11B57000EBF97F /* girlswhocode.png in Resources */,
-				E7DB665E1A11C4D800EBF97F /* malala.jpg in Resources */,
 				E7C636341A2FED0A00EEAABE /* app-icon.png in Resources */,
 				E78274811A1068C7002BDF58 /* Main.storyboard in Resources */,
-				E7DB66701A11D44300EBF97F /* americanredcross.jpg in Resources */,
 				E78274861A1068C7002BDF58 /* LaunchScreen.xib in Resources */,
 				E7A7248F1A1D660B0023E59C /* dollar-sign.png in Resources */,
 				E7C6363B1A2FF1A800EEAABE /* app-title-bar-logo.png in Resources */,
-				E7DB664F1A11B53B00EBF97F /* charitywater.jpg in Resources */,
-				E7DB66601A11C5F300EBF97F /* wwp.jpg in Resources */,
 				E7C636371A2FEEAF00EEAABE /* app-launch-screen.png in Resources */,
 				E7C6363F1A2FF77E00EEAABE /* app-title-bar-logo@x1.png in Resources */,
 				E7A7248D1A1D65760023E59C /* send.png in Resources */,
-				E7DB66511A11B54B00EBF97F /* msf.jpg in Resources */,
-				E7DB664D1A11B51A00EBF97F /* hrw.png in Resources */,
-				E7DB66721A11D49D00EBF97F /* maw.jpg in Resources */,
 				E7A724951A1D6BD20023E59C /* settings@2x.png in Resources */,
-				E7DB666E1A11D3E900EBF97F /* amnesty.jpg in Resources */,
-				E7DB664B1A11B51000EBF97F /* ushahidi.jpg in Resources */,
 				E7C636431A2FFC5C00EEAABE /* app-title-bar-logo@x3.png in Resources */,
 				E78274831A1068C7002BDF58 /* Images.xcassets in Resources */,
 				E7C636411A2FF99A00EEAABE /* app-title-bar-logo@x2.png in Resources */,

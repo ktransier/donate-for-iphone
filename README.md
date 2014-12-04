@@ -13,7 +13,6 @@
 - 20 nonprofits
 - Restyle notifications
 - Style email
-- Logo/loading screen
 
 ### Legal
 - Set up bank account
