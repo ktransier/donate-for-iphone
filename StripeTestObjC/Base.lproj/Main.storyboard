@@ -794,7 +794,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.97068661451339722" green="0.97082573175430298" blue="0.97065621614456177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 </variation>
                                 <connections>
                                     <outlet property="delegate" destination="6ld-nV-sCg" id="zT0-Eg-IBb"/>
@@ -819,7 +819,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSY-LW-BaV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2852.25" y="916.875"/>
+            <point key="canvasLocation" x="2855.25" y="923.625"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fiH-yf-E8J">
