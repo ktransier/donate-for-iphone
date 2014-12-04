@@ -16,9 +16,7 @@
 - Logo/loading screen
 
 ### Legal
-- Set up LLC
 - Set up bank account
-- Set up appointment with lawyer
 
 ### Launch
 - Submit for beta test review
@@ -29,7 +27,3 @@
 - Promo homepage
     - Contact info
     - Add criteria description
-
-Tax Deductability
-http://support.indiegogo.com/hc/en-us/articles/202444736-How-To-Raise-Tax-Deductible-Funds
-https://www.redditdonate.com/faq/npo

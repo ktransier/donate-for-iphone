@@ -65,6 +65,11 @@
         // Set navigation bar background attributes
         [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
         [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1]];
+        
+        UIImage *image = [UIImage imageNamed: @"AppTitleBarLogo"];
+        UIImageView *imageView = [[UIImageView alloc] initWithImage: image];
+        
+        self.navigationItem.titleView = imageView;
     }
 
     - (void)didReceiveMemoryWarning {

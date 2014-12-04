@@ -335,12 +335,12 @@
                                 <exclude reference="3fj-md-nrI"/>
                                 <exclude reference="UPf-v8-7Ht"/>
                                 <exclude reference="xjW-To-1lr"/>
-                                <exclude reference="EXx-7G-cb4"/>
-                                <exclude reference="EhB-W4-Er4"/>
-                                <exclude reference="Gtw-u7-w6D"/>
                                 <exclude reference="AAh-pt-0ci"/>
                                 <exclude reference="t2J-ta-Qd2"/>
                                 <exclude reference="tHX-S1-dCa"/>
+                                <exclude reference="EXx-7G-cb4"/>
+                                <exclude reference="EhB-W4-Er4"/>
+                                <exclude reference="Gtw-u7-w6D"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -353,12 +353,12 @@
                                 <include reference="3fj-md-nrI"/>
                                 <include reference="UPf-v8-7Ht"/>
                                 <include reference="xjW-To-1lr"/>
-                                <include reference="EXx-7G-cb4"/>
-                                <include reference="EhB-W4-Er4"/>
-                                <include reference="Gtw-u7-w6D"/>
                                 <include reference="AAh-pt-0ci"/>
                                 <include reference="t2J-ta-Qd2"/>
                                 <include reference="tHX-S1-dCa"/>
+                                <include reference="EXx-7G-cb4"/>
+                                <include reference="EhB-W4-Er4"/>
+                                <include reference="Gtw-u7-w6D"/>
                             </mask>
                         </variation>
                     </view>
@@ -794,7 +794,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.97068661451339722" green="0.97082573175430298" blue="0.97065621614456177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 </variation>
                                 <connections>
                                     <outlet property="delegate" destination="6ld-nV-sCg" id="zT0-Eg-IBb"/>
@@ -864,7 +864,6 @@
         <!--Navigation Controller-->
         <scene sceneID="O1N-ht-PdB">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lQr-ar-YDp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BRY-By-Z1f" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="fz8-bo-U3X">
@@ -876,6 +875,7 @@
                         <segue destination="mhh-XA-9iA" kind="relationship" relationship="rootViewController" id="FO4-04-dA1"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lQr-ar-YDp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2871" y="1567.5"/>
         </scene>

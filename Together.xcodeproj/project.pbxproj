@@ -22,8 +22,12 @@
 		E7A724951A1D6BD20023E59C /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A724921A1D6BD20023E59C /* settings@2x.png */; };
 		E7A724961A1D6BD20023E59C /* settings@x1.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A724931A1D6BD20023E59C /* settings@x1.png */; };
 		E7A724971A1D6BD20023E59C /* settings@x3.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A724941A1D6BD20023E59C /* settings@x3.png */; };
-		E7A7249B1A1E83470023E59C /* app-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A7249A1A1E83470023E59C /* app-logo.png */; };
-		E7A7249D1A1E83990023E59C /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A7249C1A1E83990023E59C /* app-icon.png */; };
+		E7C636341A2FED0A00EEAABE /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E7C636311A2FED0A00EEAABE /* app-icon.png */; };
+		E7C636371A2FEEAF00EEAABE /* app-launch-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = E7C636361A2FEEAF00EEAABE /* app-launch-screen.png */; };
+		E7C6363B1A2FF1A800EEAABE /* app-title-bar-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E7C6363A1A2FF1A800EEAABE /* app-title-bar-logo.png */; };
+		E7C6363F1A2FF77E00EEAABE /* app-title-bar-logo@x1.png in Resources */ = {isa = PBXBuildFile; fileRef = E7C6363D1A2FF77E00EEAABE /* app-title-bar-logo@x1.png */; };
+		E7C636411A2FF99A00EEAABE /* app-title-bar-logo@x2.png in Resources */ = {isa = PBXBuildFile; fileRef = E7C636401A2FF99A00EEAABE /* app-title-bar-logo@x2.png */; };
+		E7C636431A2FFC5C00EEAABE /* app-title-bar-logo@x3.png in Resources */ = {isa = PBXBuildFile; fileRef = E7C636421A2FFC5C00EEAABE /* app-title-bar-logo@x3.png */; };
 		E7DB66481A11937400EBF97F /* OrgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DB66471A11937400EBF97F /* OrgCell.m */; };
 		E7DB664B1A11B51000EBF97F /* ushahidi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7DB664A1A11B51000EBF97F /* ushahidi.jpg */; };
 		E7DB664D1A11B51A00EBF97F /* hrw.png in Resources */ = {isa = PBXBuildFile; fileRef = E7DB664C1A11B51A00EBF97F /* hrw.png */; };
@@ -77,8 +81,12 @@
 		E7A724921A1D6BD20023E59C /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
 		E7A724931A1D6BD20023E59C /* settings@x1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@x1.png"; sourceTree = "<group>"; };
 		E7A724941A1D6BD20023E59C /* settings@x3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@x3.png"; sourceTree = "<group>"; };
-		E7A7249A1A1E83470023E59C /* app-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-logo.png"; sourceTree = "<group>"; };
-		E7A7249C1A1E83990023E59C /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
+		E7C636311A2FED0A00EEAABE /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
+		E7C636361A2FEEAF00EEAABE /* app-launch-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-launch-screen.png"; sourceTree = "<group>"; };
+		E7C6363A1A2FF1A800EEAABE /* app-title-bar-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-title-bar-logo.png"; sourceTree = "<group>"; };
+		E7C6363D1A2FF77E00EEAABE /* app-title-bar-logo@x1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-title-bar-logo@x1.png"; sourceTree = "<group>"; };
+		E7C636401A2FF99A00EEAABE /* app-title-bar-logo@x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-title-bar-logo@x2.png"; sourceTree = "<group>"; };
+		E7C636421A2FFC5C00EEAABE /* app-title-bar-logo@x3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-title-bar-logo@x3.png"; sourceTree = "<group>"; };
 		E7D497221A2C5298006D9016 /* Together.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Together.entitlements; sourceTree = SOURCE_ROOT; };
 		E7DB66461A11937400EBF97F /* OrgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrgCell.h; sourceTree = "<group>"; };
 		E7DB66471A11937400EBF97F /* OrgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrgCell.m; sourceTree = "<group>"; };
@@ -188,9 +196,13 @@
 		E78274751A1068C7002BDF58 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E7A7249C1A1E83990023E59C /* app-icon.png */,
-				E7A7249A1A1E83470023E59C /* app-logo.png */,
+				E7C636421A2FFC5C00EEAABE /* app-title-bar-logo@x3.png */,
+				E7C636401A2FF99A00EEAABE /* app-title-bar-logo@x2.png */,
+				E7C6363D1A2FF77E00EEAABE /* app-title-bar-logo@x1.png */,
+				E7C6363A1A2FF1A800EEAABE /* app-title-bar-logo.png */,
+				E7C636361A2FEEAF00EEAABE /* app-launch-screen.png */,
 				E7A724921A1D6BD20023E59C /* settings@2x.png */,
+				E7C636311A2FED0A00EEAABE /* app-icon.png */,
 				E7A724931A1D6BD20023E59C /* settings@x1.png */,
 				E7A724941A1D6BD20023E59C /* settings@x3.png */,
 				E7A7248E1A1D660B0023E59C /* dollar-sign.png */,
@@ -340,14 +352,16 @@
 				E7DB666C1A11CC9000EBF97F /* habitat.jpg in Resources */,
 				E7DB66531A11B57000EBF97F /* girlswhocode.png in Resources */,
 				E7DB665E1A11C4D800EBF97F /* malala.jpg in Resources */,
+				E7C636341A2FED0A00EEAABE /* app-icon.png in Resources */,
 				E78274811A1068C7002BDF58 /* Main.storyboard in Resources */,
-				E7A7249D1A1E83990023E59C /* app-icon.png in Resources */,
 				E7DB66701A11D44300EBF97F /* americanredcross.jpg in Resources */,
 				E78274861A1068C7002BDF58 /* LaunchScreen.xib in Resources */,
-				E7A7249B1A1E83470023E59C /* app-logo.png in Resources */,
 				E7A7248F1A1D660B0023E59C /* dollar-sign.png in Resources */,
+				E7C6363B1A2FF1A800EEAABE /* app-title-bar-logo.png in Resources */,
 				E7DB664F1A11B53B00EBF97F /* charitywater.jpg in Resources */,
 				E7DB66601A11C5F300EBF97F /* wwp.jpg in Resources */,
+				E7C636371A2FEEAF00EEAABE /* app-launch-screen.png in Resources */,
+				E7C6363F1A2FF77E00EEAABE /* app-title-bar-logo@x1.png in Resources */,
 				E7A7248D1A1D65760023E59C /* send.png in Resources */,
 				E7DB66511A11B54B00EBF97F /* msf.jpg in Resources */,
 				E7DB664D1A11B51A00EBF97F /* hrw.png in Resources */,
@@ -355,7 +369,9 @@
 				E7A724951A1D6BD20023E59C /* settings@2x.png in Resources */,
 				E7DB666E1A11D3E900EBF97F /* amnesty.jpg in Resources */,
 				E7DB664B1A11B51000EBF97F /* ushahidi.jpg in Resources */,
+				E7C636431A2FFC5C00EEAABE /* app-title-bar-logo@x3.png in Resources */,
 				E78274831A1068C7002BDF58 /* Images.xcassets in Resources */,
+				E7C636411A2FF99A00EEAABE /* app-title-bar-logo@x2.png in Resources */,
 				E7A724971A1D6BD20023E59C /* settings@x3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
