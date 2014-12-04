@@ -6,10 +6,8 @@
 - Resize donation screen on iPhone 4/5
 - Resize manual donation page
 - Add dynamic descriptors
-- About screen
-    - Contact
-    - Credits
-        - Flaticons
+- Credits
+    - Flaticons
 - 20 nonprofits
 - Restyle notifications
 - Style email
@@ -26,3 +24,4 @@
 - Promo homepage
     - Contact info
     - Add criteria description
+    - Credits
