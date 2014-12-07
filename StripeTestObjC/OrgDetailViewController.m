@@ -98,15 +98,15 @@
     // Error message unless donation amount between $1 and $9,999 USD
     if (![self.donationAmount.text integerValue] > 0 && [self.donationAmount.text integerValue] < 10000) {
         
-        [TSMessage showNotificationWithTitle:@"Warning!"
-                                    subtitle:@"Please enter a value greater than 0!"
+        [TSMessage showNotificationWithTitle:@"Hint"
+                                    subtitle:@"Minimum donation is $1"
                                         type:TSMessageNotificationTypeWarning];
 
     // Error message unless valid email address
     } else if (![self NSStringIsValidEmail:self.emailField.text]) {
         
-        [TSMessage showNotificationWithTitle:@"Warning!"
-                                    subtitle:@"Please enter a valid email!"
+        [TSMessage showNotificationWithTitle:@"Hint"
+                                    subtitle:@"Please enter a valid email"
                                         type:TSMessageNotificationTypeWarning];
     
     // Process donation
@@ -198,13 +198,13 @@
                                    NSDictionary * parsedData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
                                    NSString* message = parsedData[@"message"];
                                    if ([message isEqual:@"Your card was charged successfully."]) {
-                                       [TSMessage showNotificationWithTitle:@"Success!"
-                                                                   subtitle:@"Thank you for your donation!"
+                                       [TSMessage showNotificationWithTitle:@"Donation successful"
+                                                                   subtitle:@"An email receipt has been sent to your inbox"
                                                                        type:TSMessageNotificationTypeSuccess];
                                        completion(PKPaymentAuthorizationStatusSuccess);
                                    } else {
                                        [TSMessage showNotificationInViewController:self
-                                                                             title:@"Card Error!"
+                                                                             title:@"Card Error"
                                                                           subtitle:message
                                                                               type:TSMessageNotificationTypeError];
                                         completion(PKPaymentAuthorizationStatusFailure);

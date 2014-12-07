@@ -5,11 +5,11 @@
 
 - Resize donation screen on iPhone 4/5
 - Resize manual donation page
-- Restyle notifications
 - Add org info to email
 - Resign first repsonder in settings for other rows
 - Settings autolayout
 - About link
+- Add initial screen on first app startup
 
 ### Legal
 - Set up bank account
@@ -22,7 +22,10 @@
 - Change passwords and API tokens
 - Contact charities
 - Promo homepage
-    - Contact info
+    - write Contact info
+    - privacy policy
+    - about
+    - press kit
     - Add criteria description
     - Credits
         - Flaticons

@@ -28,6 +28,7 @@
     - (void)viewDidLoad {
         
         [super viewDidLoad];
+        [TSMessage addCustomDesignFromFileWithName:@"TSMessageAlternativeDesign.json"];
         
         // Set navigation bar text and table view attributes
         self.navigationItem.title = @"Together";
@@ -98,7 +99,7 @@
             NSLog(@"Request Failed: %@, %@", error, error.userInfo);
             [TSMessage showNotificationWithTitle:@"Network error"
                                         subtitle:@"Please check your internet connection."
-                                            type:TSMessageNotificationTypeWarning];
+                                            type:TSMessageNotificationTypeError];
         }];
         [operation start];
         [self reloadData];

@@ -33,6 +33,8 @@
 		E7DB665B1A11B7B200EBF97F /* Organization.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DB665A1A11B7B200EBF97F /* Organization.m */; };
 		E7DB66981A15C53A00EBF97F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DB66971A15C53A00EBF97F /* SettingsViewController.m */; };
 		E7DB669B1A15D7A800EBF97F /* PaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DB669A1A15D7A800EBF97F /* PaymentViewController.m */; };
+		E7E75B381A34061F00F86D4B /* TSMessagesBackgroundWarningIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E7E75B371A34061F00F86D4B /* TSMessagesBackgroundWarningIcon.png */; };
+		E7F799AC1A332442000228EF /* TSMessageAlternativeDesign.json in Resources */ = {isa = PBXBuildFile; fileRef = E7F799AB1A332442000228EF /* TSMessageAlternativeDesign.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		E7DB66971A15C53A00EBF97F /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		E7DB66991A15D7A800EBF97F /* PaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentViewController.h; sourceTree = "<group>"; };
 		E7DB669A1A15D7A800EBF97F /* PaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentViewController.m; sourceTree = "<group>"; };
+		E7E75B371A34061F00F86D4B /* TSMessagesBackgroundWarningIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TSMessagesBackgroundWarningIcon.png; sourceTree = "<group>"; };
+		E7F799AB1A332442000228EF /* TSMessageAlternativeDesign.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TSMessageAlternativeDesign.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,8 @@
 		E78274751A1068C7002BDF58 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E7E75B371A34061F00F86D4B /* TSMessagesBackgroundWarningIcon.png */,
+				E7F799AB1A332442000228EF /* TSMessageAlternativeDesign.json */,
 				E7C636421A2FFC5C00EEAABE /* app-title-bar-logo@x3.png */,
 				E7C636401A2FF99A00EEAABE /* app-title-bar-logo@x2.png */,
 				E7C6363D1A2FF77E00EEAABE /* app-title-bar-logo@x1.png */,
@@ -311,11 +317,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7F799AC1A332442000228EF /* TSMessageAlternativeDesign.json in Resources */,
 				E7A724961A1D6BD20023E59C /* settings@x1.png in Resources */,
 				E7C636341A2FED0A00EEAABE /* app-icon.png in Resources */,
 				E78274811A1068C7002BDF58 /* Main.storyboard in Resources */,
 				E78274861A1068C7002BDF58 /* LaunchScreen.xib in Resources */,
 				E7A7248F1A1D660B0023E59C /* dollar-sign.png in Resources */,
+				E7E75B381A34061F00F86D4B /* TSMessagesBackgroundWarningIcon.png in Resources */,
 				E7C6363B1A2FF1A800EEAABE /* app-title-bar-logo.png in Resources */,
 				E7C636371A2FEEAF00EEAABE /* app-launch-screen.png in Resources */,
 				E7C6363F1A2FF77E00EEAABE /* app-title-bar-logo@x1.png in Resources */,

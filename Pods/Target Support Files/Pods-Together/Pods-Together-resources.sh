@@ -70,7 +70,6 @@ install_resource()
                     install_resource "TSMessages/Pod/Assets/NotificationBackgroundErrorIcon@2x.png"
                     install_resource "TSMessages/Pod/Assets/NotificationBackgroundMessage.png"
                     install_resource "TSMessages/Pod/Assets/NotificationBackgroundMessage@2x.png"
-                    install_resource "TSMessages/Pod/Assets/NotificationBackgroundSuccess.png"
                     install_resource "TSMessages/Pod/Assets/NotificationBackgroundSuccess@2x.png"
                     install_resource "TSMessages/Pod/Assets/NotificationBackgroundSuccessIcon.png"
                     install_resource "TSMessages/Pod/Assets/NotificationBackgroundSuccessIcon@2x.png"
