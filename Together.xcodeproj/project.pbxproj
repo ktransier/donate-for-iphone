@@ -34,6 +34,18 @@
 		E7DB66981A15C53A00EBF97F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DB66971A15C53A00EBF97F /* SettingsViewController.m */; };
 		E7DB669B1A15D7A800EBF97F /* PaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DB669A1A15D7A800EBF97F /* PaymentViewController.m */; };
 		E7E75B381A34061F00F86D4B /* TSMessagesBackgroundWarningIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E7E75B371A34061F00F86D4B /* TSMessagesBackgroundWarningIcon.png */; };
+		E7E75B3B1A354E5D00F86D4B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E75B391A354E5D00F86D4B /* Bolts.framework */; };
+		E7E75B3C1A354E5D00F86D4B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E75B3A1A354E5D00F86D4B /* Parse.framework */; };
+		E7E75B3E1A354E8C00F86D4B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E75B3D1A354E8C00F86D4B /* AudioToolbox.framework */; };
+		E7E75B401A354E9500F86D4B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E75B3F1A354E9500F86D4B /* CFNetwork.framework */; };
+		E7E75B421A354E9E00F86D4B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E75B411A354E9E00F86D4B /* CoreGraphics.framework */; };
+		E7E75B441A354EA500F86D4B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E75B431A354EA500F86D4B /* CoreLocation.framework */; };
+		E7E75B461A354EB100F86D4B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E75B451A354EB100F86D4B /* libz.dylib */; };
+		E7E75B481A354EC500F86D4B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E75B471A354EC500F86D4B /* MobileCoreServices.framework */; };
+		E7E75B4A1A354EE500F86D4B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E75B491A354EE500F86D4B /* QuartzCore.framework */; };
+		E7E75B4C1A354EED00F86D4B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E75B4B1A354EED00F86D4B /* Security.framework */; };
+		E7E75B4E1A354EF900F86D4B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E75B4D1A354EF900F86D4B /* StoreKit.framework */; };
+		E7E75B501A354F0300F86D4B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E75B4F1A354F0300F86D4B /* SystemConfiguration.framework */; };
 		E7F799AC1A332442000228EF /* TSMessageAlternativeDesign.json in Resources */ = {isa = PBXBuildFile; fileRef = E7F799AB1A332442000228EF /* TSMessageAlternativeDesign.json */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +102,18 @@
 		E7DB66991A15D7A800EBF97F /* PaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentViewController.h; sourceTree = "<group>"; };
 		E7DB669A1A15D7A800EBF97F /* PaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentViewController.m; sourceTree = "<group>"; };
 		E7E75B371A34061F00F86D4B /* TSMessagesBackgroundWarningIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TSMessagesBackgroundWarningIcon.png; sourceTree = "<group>"; };
+		E7E75B391A354E5D00F86D4B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		E7E75B3A1A354E5D00F86D4B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		E7E75B3D1A354E8C00F86D4B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E7E75B3F1A354E9500F86D4B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E7E75B411A354E9E00F86D4B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E7E75B431A354EA500F86D4B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E7E75B451A354EB100F86D4B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		E7E75B471A354EC500F86D4B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E7E75B491A354EE500F86D4B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E7E75B4B1A354EED00F86D4B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E7E75B4D1A354EF900F86D4B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		E7E75B4F1A354F0300F86D4B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E7F799AB1A332442000228EF /* TSMessageAlternativeDesign.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TSMessageAlternativeDesign.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,7 +122,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7E75B501A354F0300F86D4B /* SystemConfiguration.framework in Frameworks */,
+				E7E75B4E1A354EF900F86D4B /* StoreKit.framework in Frameworks */,
+				E7E75B4C1A354EED00F86D4B /* Security.framework in Frameworks */,
+				E7E75B4A1A354EE500F86D4B /* QuartzCore.framework in Frameworks */,
+				E7E75B481A354EC500F86D4B /* MobileCoreServices.framework in Frameworks */,
+				E7E75B461A354EB100F86D4B /* libz.dylib in Frameworks */,
+				E7E75B441A354EA500F86D4B /* CoreLocation.framework in Frameworks */,
+				E7E75B421A354E9E00F86D4B /* CoreGraphics.framework in Frameworks */,
+				E7E75B401A354E9500F86D4B /* CFNetwork.framework in Frameworks */,
+				E7E75B3E1A354E8C00F86D4B /* AudioToolbox.framework in Frameworks */,
+				E7E75B3B1A354E5D00F86D4B /* Bolts.framework in Frameworks */,
 				E7C636451A3061ED00EEAABE /* MessageUI.framework in Frameworks */,
+				E7E75B3C1A354E5D00F86D4B /* Parse.framework in Frameworks */,
 				794128DC2867740BEA0A89EC /* libPods-Together.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -125,6 +161,18 @@
 		90DCB9A814B448270E01B3D2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E7E75B4F1A354F0300F86D4B /* SystemConfiguration.framework */,
+				E7E75B4D1A354EF900F86D4B /* StoreKit.framework */,
+				E7E75B4B1A354EED00F86D4B /* Security.framework */,
+				E7E75B491A354EE500F86D4B /* QuartzCore.framework */,
+				E7E75B471A354EC500F86D4B /* MobileCoreServices.framework */,
+				E7E75B451A354EB100F86D4B /* libz.dylib */,
+				E7E75B431A354EA500F86D4B /* CoreLocation.framework */,
+				E7E75B411A354E9E00F86D4B /* CoreGraphics.framework */,
+				E7E75B3F1A354E9500F86D4B /* CFNetwork.framework */,
+				E7E75B3D1A354E8C00F86D4B /* AudioToolbox.framework */,
+				E7E75B391A354E5D00F86D4B /* Bolts.framework */,
+				E7E75B3A1A354E5D00F86D4B /* Parse.framework */,
 				E7C636441A3061ED00EEAABE /* MessageUI.framework */,
 				563C4C7C53939917C13B45AB /* libPods-Together.a */,
 			);
@@ -519,6 +567,10 @@
 				CODE_SIGN_ENTITLEMENTS = Together.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					STRIPE_ENABLE_APPLEPAY,
@@ -540,6 +592,10 @@
 				CODE_SIGN_ENTITLEMENTS = Together.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
