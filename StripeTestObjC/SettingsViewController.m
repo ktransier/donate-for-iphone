@@ -46,11 +46,26 @@
     // Send to detail view controller when tableview cell tapped
     - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
         
+        if (indexPath.section == 1 && indexPath.row == 0) {
+            
+            [self performSegueWithIdentifier:@"showAbout" sender: self];
+        }
+
         if (indexPath.section == 1 && indexPath.row == 1) {
+            
+            [self performSegueWithIdentifier:@"showFAQS" sender: self];
+        }
+        
+        if (indexPath.section == 1 && indexPath.row == 2) {
             
             [self performSegueWithIdentifier:@"showPrivacyPolicy" sender: self];
         }
-        if (indexPath.section == 1 && indexPath.row == 2) {
+
+        if (indexPath.section == 1 && indexPath.row == 3) {
+            
+            [self performSegueWithIdentifier:@"showCredits" sender: self];
+        }
+        if (indexPath.section == 1 && indexPath.row == 4                                                                                                                                            ) {
             
             // Set mailview navbar to white
             [UINavigationBar appearance].barTintColor = [UIColor whiteColor];
@@ -94,10 +109,27 @@
 
     - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
         
+        if ([segue.identifier isEqual:@"showAbout"]) {
+            WebViewController* destinationViewController = segue.destinationViewController;
+            destinationViewController.url = @"https://togetherapp.org/about";
+        }
+        
+        if ([segue.identifier isEqual:@"showFAQS"]) {
+            WebViewController* destinationViewController = segue.destinationViewController;
+            destinationViewController.url = @"https://togetherapp.org/about#faqs";
+        }
+
         if ([segue.identifier isEqual:@"showPrivacyPolicy"]) {
             WebViewController* destinationViewController = segue.destinationViewController;
-            destinationViewController.url = @"https://google.com";
+            destinationViewController.url = @"https://togetherapp.org/privacy-policy";
         }
+
+        if ([segue.identifier isEqual:@"showCredits"]) {
+            WebViewController* destinationViewController = segue.destinationViewController;
+            destinationViewController.url = @"https://togetherapp.org/about#credits";
+        }
+        
+
         
         // Remove back button text
         self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
