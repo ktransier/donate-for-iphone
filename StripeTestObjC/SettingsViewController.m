@@ -71,7 +71,7 @@
             [UINavigationBar appearance].barTintColor = [UIColor whiteColor];
             
             // Set mailview
-            NSArray *toRecipents = [NSArray arrayWithObject:@"team@togetherapp.org"];
+            NSArray *toRecipents = [NSArray arrayWithObject:@"team@donateapp.co"];
             MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];
             mailComposer.mailComposeDelegate = self;
             [mailComposer setToRecipients:toRecipents];
@@ -111,22 +111,22 @@
         
         if ([segue.identifier isEqual:@"showAbout"]) {
             WebViewController* destinationViewController = segue.destinationViewController;
-            destinationViewController.url = @"https://togetherapp.org/about";
+            destinationViewController.url = @"https://donateapp.co/about";
         }
         
         if ([segue.identifier isEqual:@"showFAQS"]) {
             WebViewController* destinationViewController = segue.destinationViewController;
-            destinationViewController.url = @"https://togetherapp.org/about#faqs";
+            destinationViewController.url = @"https://donateapp.co/about#faqs";
         }
 
         if ([segue.identifier isEqual:@"showPrivacyPolicy"]) {
             WebViewController* destinationViewController = segue.destinationViewController;
-            destinationViewController.url = @"https://togetherapp.org/privacy-policy";
+            destinationViewController.url = @"https://donateapp.co/privacy-policy";
         }
 
         if ([segue.identifier isEqual:@"showCredits"]) {
             WebViewController* destinationViewController = segue.destinationViewController;
-            destinationViewController.url = @"https://togetherapp.org/about#credits";
+            destinationViewController.url = @"https://donateapp.co/about#credits";
         }
         
 

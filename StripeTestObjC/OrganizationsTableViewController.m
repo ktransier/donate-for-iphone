@@ -86,7 +86,7 @@
     -(void)makeOrganizationsRequest
     {
         // Set url
-        NSURL *url = [NSURL URLWithString:@"https://togetherapp.org/organizations.json"];
+        NSURL *url = [NSURL URLWithString:@"https://donateapp.co/organizations.json"];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
         
         // AFNetworking asynchronous url request
@@ -119,7 +119,7 @@
         cell.orgNameLabel.text = org[@"name"];
         
         // Set cell image
-        NSString* fullImageURL = @"https://togetherapp.org/org-images/";
+        NSString* fullImageURL = @"https://donateapp.co/org-images/";
         NSString* imageURL = org[@"image_url"];
         fullImageURL = [fullImageURL stringByAppendingString:imageURL];
         [cell.image sd_setImageWithURL:[NSURL URLWithString:fullImageURL]

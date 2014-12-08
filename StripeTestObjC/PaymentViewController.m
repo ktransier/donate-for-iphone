@@ -83,7 +83,7 @@
         NSString* email = [defaults objectForKey:@"email"];
         
         // Set URL
-        NSURL *url = [NSURL URLWithString:@"https://togetherapp.org/donations/token"];
+        NSURL *url = [NSURL URLWithString:@"https://donateapp.co/donations/token"];
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
         request.HTTPMethod = @"POST";
         NSString *body     = [NSString stringWithFormat:@"stripe_token=%@&organization_name=%@&email=%@&amount=%@&organization_id=%@", token.tokenId, self.org[@"name"], email, self.donationAmount, self.org[@"id"]];

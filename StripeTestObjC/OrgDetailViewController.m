@@ -41,7 +41,7 @@
     [self.webButton setTitle:self.org[@"home_url"]forState:UIControlStateNormal];
     
     // Load image
-    NSString* fullImageUrl = @"https://togetherapp.org/org-images/";
+    NSString* fullImageUrl = @"https://donateapp.co/org-images/";
     NSString* imageURL = self.org[@"image_url"];
     fullImageUrl = [fullImageUrl stringByAppendingString:imageURL];
     self.orgImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:fullImageUrl]]];
@@ -180,7 +180,7 @@
     NSString* email = [defaults objectForKey:@"email"];
     
     // Setup request
-    NSURL *url = [NSURL URLWithString:@"https://togetherapp.org/donations/token"];
+    NSURL *url = [NSURL URLWithString:@"https://donateapp.co/donations/token"];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     request.HTTPMethod = @"POST";
     NSString *body     = [NSString stringWithFormat:@"stripe_token=%@&organization_name=%@&email=%@&amount=%@&organization_id=%@", token.tokenId, self.org[@"name"], email, self.donationAmount.text, self.org[@"id"]];
