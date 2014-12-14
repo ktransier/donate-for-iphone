@@ -11,5 +11,6 @@
 @interface WebViewController : UIViewController 
 
     @property (weak, nonatomic) NSString* url;
+    @property (weak, nonatomic) NSString* pageTitle;
 
 @end

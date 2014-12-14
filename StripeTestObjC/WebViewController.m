@@ -44,6 +44,12 @@
 
     - (void)webViewDidFinishLoad:(UIWebView *)webView {
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        if (self.pageTitle) {
+            self.navigationItem.title = self.pageTitle;
+        } else {
+            NSString* pageTitleFromURL = [self.webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+            self.navigationItem.title = pageTitleFromURL;
+        }
     }
 
     - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error

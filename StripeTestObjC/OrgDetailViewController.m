@@ -45,10 +45,10 @@
     NSString* imageURL = self.org[@"image_url"];
     fullImageUrl = [fullImageUrl stringByAppendingString:imageURL];
     self.orgImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:fullImageUrl]]];
-    self.orgImage.layer.cornerRadius = 72.5;
-    self.orgImage.layer.borderWidth = 1.0;
-    self.orgImage.layer.borderColor = [UIColor colorWithRed:0.855 green:0.875 blue:0.882 alpha:1].CGColor;
-    self.orgImage.clipsToBounds = true;
+//    self.orgImage.layer.cornerRadius = 72.5;
+//    self.orgImage.layer.borderWidth = 1.0;
+//    self.orgImage.layer.borderColor = [UIColor colorWithRed:0.855 green:0.875 blue:0.882 alpha:1].CGColor;
+//    self.orgImage.clipsToBounds = true;
     
     // Prefill email from user defaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

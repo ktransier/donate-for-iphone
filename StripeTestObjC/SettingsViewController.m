@@ -112,21 +112,25 @@
         if ([segue.identifier isEqual:@"showAbout"]) {
             WebViewController* destinationViewController = segue.destinationViewController;
             destinationViewController.url = @"https://donateapp.co/about";
+            destinationViewController.pageTitle = @"About";
         }
         
         if ([segue.identifier isEqual:@"showFAQS"]) {
             WebViewController* destinationViewController = segue.destinationViewController;
-            destinationViewController.url = @"https://donateapp.co/about#faqs";
+            destinationViewController.url = @"https://donateapp.co/about#faq";
+            destinationViewController.pageTitle = @"FAQ";
         }
 
         if ([segue.identifier isEqual:@"showPrivacyPolicy"]) {
             WebViewController* destinationViewController = segue.destinationViewController;
             destinationViewController.url = @"https://donateapp.co/privacy-policy";
+            destinationViewController.pageTitle = @"Privacy Policy";
         }
 
         if ([segue.identifier isEqual:@"showCredits"]) {
             WebViewController* destinationViewController = segue.destinationViewController;
             destinationViewController.url = @"https://donateapp.co/about#credits";
+            destinationViewController.pageTitle = @"Credits";
         }
         
 
