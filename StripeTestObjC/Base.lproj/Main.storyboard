@@ -181,10 +181,10 @@
                             <mask key="constraints">
                                 <exclude reference="3fj-md-nrI"/>
                                 <exclude reference="aUc-Q5-lro"/>
-                                <exclude reference="EhB-W4-Er4"/>
-                                <exclude reference="hSD-Xz-vjr"/>
                                 <exclude reference="8Xq-kn-GTY"/>
                                 <exclude reference="tHX-S1-dCa"/>
+                                <exclude reference="EhB-W4-Er4"/>
+                                <exclude reference="hSD-Xz-vjr"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -196,10 +196,10 @@
                             <mask key="constraints">
                                 <include reference="3fj-md-nrI"/>
                                 <include reference="aUc-Q5-lro"/>
-                                <include reference="EhB-W4-Er4"/>
-                                <include reference="hSD-Xz-vjr"/>
                                 <include reference="8Xq-kn-GTY"/>
                                 <include reference="tHX-S1-dCa"/>
+                                <include reference="EhB-W4-Er4"/>
+                                <include reference="hSD-Xz-vjr"/>
                             </mask>
                         </variation>
                     </view>
@@ -833,15 +833,15 @@ Handcrafted in Seattle
                                                     <exclude reference="EVL-Io-VoN"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="TV4-u0-V5D"/>
-                                                    <exclude reference="Tby-oL-fvu"/>
-                                                    <exclude reference="beT-F6-iuO"/>
                                                     <exclude reference="BdS-1q-Om2"/>
                                                     <exclude reference="NoL-au-jKz"/>
                                                     <exclude reference="T3C-Bs-rYN"/>
                                                     <exclude reference="bC7-1l-BFi"/>
                                                     <exclude reference="ft3-Nm-1yH"/>
                                                     <exclude reference="xxK-hY-Iqw"/>
+                                                    <exclude reference="TV4-u0-V5D"/>
+                                                    <exclude reference="Tby-oL-fvu"/>
+                                                    <exclude reference="beT-F6-iuO"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -850,15 +850,15 @@ Handcrafted in Seattle
                                                     <include reference="EVL-Io-VoN"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="TV4-u0-V5D"/>
-                                                    <exclude reference="Tby-oL-fvu"/>
-                                                    <include reference="beT-F6-iuO"/>
                                                     <include reference="BdS-1q-Om2"/>
                                                     <include reference="NoL-au-jKz"/>
                                                     <include reference="T3C-Bs-rYN"/>
                                                     <include reference="bC7-1l-BFi"/>
                                                     <exclude reference="ft3-Nm-1yH"/>
                                                     <include reference="xxK-hY-Iqw"/>
+                                                    <include reference="TV4-u0-V5D"/>
+                                                    <exclude reference="Tby-oL-fvu"/>
+                                                    <include reference="beT-F6-iuO"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -873,9 +873,6 @@ Handcrafted in Seattle
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="20" y="11" width="347" height="20"/>
-                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -924,9 +921,6 @@ Handcrafted in Seattle
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="20" y="11" width="347" height="20"/>
-                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -975,9 +969,6 @@ Handcrafted in Seattle
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="20" y="11" width="339" height="20"/>
-                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -1026,9 +1017,6 @@ Handcrafted in Seattle
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="20" y="11" width="347" height="20"/>
-                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -1103,14 +1091,14 @@ Handcrafted in Seattle
                         <viewControllerLayoutGuide type="bottom" id="mRC-WP-yG8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="weZ-Sh-MI6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wCR-gd-3xV">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.97068661451339722" green="0.97082573175430298" blue="0.97065621614456177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="736"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 </variation>
                                 <connections>
                                     <outlet property="delegate" destination="6ld-nV-sCg" id="zT0-Eg-IBb"/>
@@ -1214,6 +1202,6 @@ Handcrafted in Seattle
         <image name="settings.png" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="s6e-Ci-x5g"/>
+        <segue reference="VLk-DL-MIv"/>
     </inferredMetricsTieBreakers>
 </document>

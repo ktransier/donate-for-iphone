@@ -39,6 +39,7 @@
     self.orgNameLabel.text = self.org[@"name"];
     self.orgContentTextView.text = self.org[@"content"];
     [self.webButton setTitle:self.org[@"home_url"]forState:UIControlStateNormal];
+    self.navigationItem.title = @"New Donation";
     
     // Load image
     NSString* fullImageUrl = @"https://donateapp.co/org-images/";
